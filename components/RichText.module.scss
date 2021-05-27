@@ -1,0 +1,107 @@
+.block {
+  padding: 48px 48px 88px 16px;
+  width: 100%;
+  max-width: 832px;
+
+  h1 {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 24px;
+  }
+
+  h3 {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  h4 {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  h5 {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  h6 {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    display: block;
+    margin-top: 16px;
+    font-size: 1rem;
+    line-height: 1.55;
+    opacity: 0.7;
+
+    a {
+      color: var(--color-primary);
+      font-weight: 400;
+      transition: 200ms ease all;
+      text-decoration: none;
+
+      &:visited {
+        color: var(--color-primary);
+      }
+
+      &:hover {
+        color: rgba(0, 22, 255, 1);
+      }
+    }
+  }
+
+  li {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+
+    a {
+      color: rgba(0, 2, 255, 1);
+      font-weight: 400;
+      transition: 200ms ease all;
+      text-decoration: none;
+
+      &:visited {
+        color: rgba(0, 2, 255, 1);
+      }
+
+      &:hover {
+        color: rgba(0, 22, 255, 1);
+      }
+    }
+  }
+
+  ul {
+    margin-top: 16px;
+    display: block;
+    padding-left: 24px;
+  }
+
+  a {
+    color: rgba(0, 2, 255, 1);
+    font-weight: 400;
+    transition: 200ms ease all;
+    text-decoration: none;
+
+    &:visited {
+      color: rgba(0, 2, 255, 1);
+    }
+
+    &:hover {
+      color: rgba(0, 22, 255, 1);
+    }
+  }
+}

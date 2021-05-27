@@ -1,0 +1,23 @@
+{
+  "name": "estuary-documentation",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next -p 3005",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "babel-plugin-module-resolver": "^4.1.0",
+    "cors": "^2.8.5",
+    "next": "latest",
+    "prism-react-renderer": "^1.2.1",
+    "raw-loader": "^4.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-live": "^2.2.3",
+    "remarkable": "^1.7.1",
+    "remarkable-react": "^1.4.3",
+    "sass": "1.26.3"
+  },
+  "license": "MIT"
+}

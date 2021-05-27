@@ -40,6 +40,12 @@
     font-weight: 600;
   }
 
+  blockquote {
+    padding-left: 24px;
+    border-left: 2px var(--color-border) solid;
+    font-style: italic;
+  }
+
   p {
     display: block;
     margin-top: 16px;

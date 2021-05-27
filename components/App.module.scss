@@ -140,6 +140,7 @@
   margin-bottom: 10px;
   opacity: 0.8;
   transition: 200ms ease all;
+  transition-property: color, opacity;
   text-decoration: none;
   color: var(--color-text);
 

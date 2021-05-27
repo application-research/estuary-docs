@@ -1,17 +1,27 @@
-import styles from "~/components/App.module.scss";
+import styles from "~/pages/Page.module.scss";
 
 import * as React from "react";
+import * as U from "~/common/utilities";
 
 import App from "~/components/App";
+import Input from "~/components/Input";
+import Textarea from "~/components/Textarea";
+import Button from "~/components/Button";
 
-const markdown = `# WIP
-
-This page has not been completed yet.
-`;
+const markdown = null;
 const code = null;
 const curl = null;
 
 function Feedback(props) {
+  const [state, setState] = React.useState({
+    name: "",
+    twitter: "",
+    email: "",
+    message: "",
+    success: false,
+    loading: false,
+  });
+
   return (
     <App
       title="Estuary Documentation: Feedbck"
@@ -21,7 +31,111 @@ function Feedback(props) {
       markdown={markdown}
       code={code}
       active="get-an-invite"
-    ></App>
+    >
+      {state.success ? (
+        <div className={styles.group}>
+          <h2>Thank you!</h2>
+          <p>
+            Everyone on our team will get a chance to read this feedback. Thank
+            you for submitting it!
+          </p>
+        </div>
+      ) : (
+        <div className={styles.group}>
+          <h2>Feedback</h2>
+          <p>
+            Would you like to provide feedback for Estuary? Please submit it
+            below. We may follow up with you for further questions!
+          </p>
+
+          <div className={styles.title}>Name</div>
+          <Input
+            style={{ marginTop: 8 }}
+            value={state.name}
+            onChange={(e) =>
+              setState({ ...state, [e.target.name]: e.target.value })
+            }
+            name="name"
+          />
+          <div className={styles.title}>E-mail (optional)</div>
+          <Input
+            style={{ marginTop: 8 }}
+            value={state.email}
+            onChange={(e) =>
+              setState({ ...state, [e.target.name]: e.target.value })
+            }
+            name="email"
+          />
+          <div className={styles.title}>Twitter (optional)</div>
+          <Input
+            style={{ marginTop: 8 }}
+            value={state.twitter}
+            onChange={(e) =>
+              setState({ ...state, [e.target.name]: e.target.value })
+            }
+            name="twitter"
+          />
+          <div className={styles.title}>
+            What would improve your experience with Estuary? (Max: 5000
+            characters)
+          </div>
+          <Textarea
+            style={{ marginTop: 8 }}
+            value={state.message}
+            onChange={(e) =>
+              setState({ ...state, [e.target.name]: e.target.value })
+            }
+            name="message"
+            maxLength={5000}
+          />
+
+          <div className={styles.action}>
+            <Button
+              loading={state.loading}
+              onClick={async () => {
+                if (U.isEmpty(state.name)) {
+                  alert("You must provide a name.");
+                  return;
+                }
+
+                if (U.isEmpty(state.message)) {
+                  alert("You must provide feedback");
+                  return;
+                }
+
+                setState({ ...state, loading: true });
+                try {
+                  fetch("/api/send-feedback", {
+                    method: "POST",
+                    headers: {
+                      Accept: "application/json",
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                      name: state.name,
+                      email: state.email,
+                      twitter: state.twitter,
+                      message: state.message,
+                    }),
+                  });
+                } catch (e) {
+                  console.log(e);
+                }
+
+                setState({
+                  ...state,
+                  success: true,
+                  loading: true,
+                  message: "",
+                });
+              }}
+            >
+              Submit
+            </Button>
+          </div>
+        </div>
+      )}
+    </App>
   );
 }
 

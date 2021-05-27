@@ -1,0 +1,49 @@
+.group {
+  padding: 24px 24px 88px 24px;
+
+  h2 {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 24px;
+  }
+
+  p {
+    max-width: 568px;
+    display: block;
+    margin-top: 16px;
+    font-size: 1rem;
+    line-height: 1.55;
+    opacity: 0.7;
+  }
+
+  a {
+    color: var(--color-primary);
+    font-weight: 400;
+    transition: 200ms ease all;
+    text-decoration: none;
+
+    &:visited {
+      color: var(--color-primary);
+    }
+
+    &:hover {
+      color: rgba(0, 22, 255, 1);
+    }
+  }
+}
+
+.title {
+  font-size: 12px;
+  margin-top: 16px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.action {
+  margin-top: 24px;
+  display: flex;
+  align-items: flex-start;
+}

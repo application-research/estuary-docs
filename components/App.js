@@ -225,7 +225,14 @@ export default function App(props) {
             className={styles.sections__index__item}
             href="/feedback"
           >
-            Feedback
+            Give feedback
+          </a>
+          <a
+            target="_blank"
+            className={styles.sections__index__item}
+            href="https://filecoin.io/slack"
+          >
+            Join Slack (#arg)
           </a>
         </div>
         <div className={styles.sections__body}>

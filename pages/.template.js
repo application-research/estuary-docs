@@ -1,4 +1,4 @@
-import styles from "~/components/App.module.scss";
+import styles from "~/pages/Page.module.scss";
 
 import * as React from "react";
 

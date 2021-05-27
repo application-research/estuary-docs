@@ -1,10 +1,10 @@
 # What is Estuary?
 
-Estuary is a simple IPFS node that integrates a minimal Filecoin Client Library. Both are open source and available to you on the [Application Research Group's GitHub](https://github.com/application-research/). **Using our technology allows developers to help people store public data and retrieve public data amongst select miners.** You can run your own Estuary Node or use our hosted Estuary Node at [https://estuary.tech](https://estuary.tech) to store files.
+Estuary is a simple IPFS node that integrates a minimal Filecoin Client Library. Both are open source and available to you on the [Application Research Group's GitHub](https://github.com/application-research/). **Using our technology allows developers to help people store public data and retrieve public data amongst select miners.** You can run your own Estuary Node (soon) or use our hosted Estuary Node at [https://estuary.tech](https://estuary.tech) to store files.
 
-Everything is open source. Feel free to take whatever we have built and use it for your own benefit. If you have any questions you can always reach out to [@wwwjim](https://www.twitter.com/wwwjim) and [@whyrusleeping](https://www.twitter.com/whyrusleeping) on Twitter, we are always willing to help.
+Feel free to take whatever [we](https://arg.protocol.ai) have built and use it for whatever you need. If you have any questions you can always reach out to [@wwwjim](https://www.twitter.com/wwwjim) and [@whyrusleeping](https://www.twitter.com/whyrusleeping) on Twitter, we are always willing to help.
 
-## What makes it different than just using IPFS?
+## What makes Estuary different than using IPFS?
 
 The setup of our node has familiar parts for those who are comfortable with IPFS.
 

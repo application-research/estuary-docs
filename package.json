@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "next -p 3005",
-    "build": "next build",
-    "start": "next start"
+    "build": "NODE_ENV=production next build",
+    "start": "NODE_ENV=production next start"
   },
   "dependencies": {
+    "@slack/webhook": "^6.0.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "next": "latest",
     "prism-react-renderer": "^1.2.1",
     "raw-loader": "^4.0.2",

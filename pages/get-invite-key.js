@@ -63,7 +63,7 @@ function GetInviteKey(props) {
             }
             name="name"
           />
-          <div className={styles.title}>E-mail (optional)</div>
+          <div className={styles.title}>E-mail</div>
           <Input
             style={{ marginTop: 8 }}
             value={state.email}
@@ -103,6 +103,13 @@ function GetInviteKey(props) {
               onClick={async () => {
                 if (U.isEmpty(state.name)) {
                   alert("You must provide a name.");
+                  return;
+                }
+
+                if (U.isEmpty(state.email)) {
+                  alert(
+                    "You must provide an e-mail, or we will not be able to reach you"
+                  );
                   return;
                 }
 

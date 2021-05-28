@@ -8,7 +8,13 @@ You can run your own Estuary Node (soon). If you don't like code or APIs you can
 
 Feel free to take whatever [we](https://arg.protocol.ai) have built and use it for whatever you need. If you have any questions you can always reach out to [@wwwjim](https://www.twitter.com/wwwjim) and [@whyrusleeping](https://www.twitter.com/whyrusleeping) on Twitter, we are always willing to help.
 
-## What makes Estuary different than using IPFS?
+## Why should I care?
+
+[Filecoin](https://filecoin.io) is a breakthrough in decentralized storage network infrastructure and protocols. There are many storage solutions on the internet but none are as advanced as Filecoin with regards to decentralization and transparency. When you store with Filecoin you get to know exactly which provider is storing your data, and the same can not be said about other centralized providers through their products and infrastructure.
+
+That being said, if you are content with opaque systems, something as transparent and globally operated like Filecoin may not appeal to you.
+
+## What makes Estuary different than IPFS?
 
 The setup of our node has familiar parts for those who are comfortable with IPFS.
 

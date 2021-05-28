@@ -33,3 +33,5 @@ With this setup, we added features that complete the Filecoin storage experience
 
 Check out our tutorial section to get started! We will walk you
 through getting your first API key and making your first API call against our [https://estuary.tech](https://estuary.tech) node.
+
+[Get an API key!](https://docs.estuary.tech/tutorial-get-an-api-key)

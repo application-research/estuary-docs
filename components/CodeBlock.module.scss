@@ -35,6 +35,8 @@
   padding: 6px;
   font-size: 0.85rem;
   border-top: #333 1px solid;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .curl {
@@ -56,4 +58,8 @@
 .preview {
   padding: 16px;
   border-top: #333 1px solid;
+  * {
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+  }
 }

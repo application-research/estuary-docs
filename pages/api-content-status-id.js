@@ -4,11 +4,11 @@ import * as React from "react";
 
 import App from "~/components/App";
 
-const markdown = `# /content/deals
+const markdown = `# /content/status/:id
 
-Use this endpoint to get all of the content on Estuary that is also stored on Filecoin through our [Estuary Node](https://estuary.tech).
+Use this endpoint to get all of the deals being made for a specific Content ID stored on our [Estuary Node](https://estuary.tech). You will also get access to our metadata and additional useful details.
 
-* Want to get the Filecoin Storage Deals per Content ID? Use [https://api.estuary.tech/content/status/:id](https://docs.estuary.tech/api-content-status-id).
+* Content IDs can be obtained by using [https://api.estuary.tech/content/deals](https://docs.estuary.tech/api-content-deals).
 
 ## This page is a work in progress
 
@@ -17,7 +17,7 @@ We will be adding more code examples and more details over time. Thanks for bear
 
 const code = `class Example extends React.Component {
   componentDidMount() {
-    fetch('https://api.estuary.tech/content/deals', {
+    fetch('https://api.estuary.tech/content/status/12', {
       method: "GET",
       headers: {
         Authorization: 'Bearer REPLACE_ME_WITH_API_KEY',
@@ -37,15 +37,15 @@ const code = `class Example extends React.Component {
 }`;
 
 const curl =
-  'curl -X GET -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" https://api.estuary.tech/content/deals';
+  'curl -X GET -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" https://api.estuary.tech/content/status/12';
 
-function APIContentDeals(props) {
+function APIContentStats(props) {
   return (
     <App
-      title="Estuary Documentation: API: /content/deals"
-      description="https://api.estuary.tech/content/deals"
-      url="https://docs.estuary.tech/api-content-deals"
-      active="api-content-deals"
+      title="Estuary Documentation: API: /content/status/:id"
+      description="https://api.estuary.tech/content/status/:id"
+      url="https://docs.estuary.tech/api-content-status-id"
+      active="api-content-status-id"
       curl={curl}
       markdown={markdown}
       code={code}
@@ -59,4 +59,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default APIContentDeals;
+export default APIContentStats;

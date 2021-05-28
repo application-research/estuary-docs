@@ -57,6 +57,7 @@ function GetInviteKey(props) {
           <Input
             style={{ marginTop: 8 }}
             value={state.name}
+            placeholder="ex: Mark Walters"
             onChange={(e) =>
               setState({ ...state, [e.target.name]: e.target.value })
             }
@@ -66,6 +67,7 @@ function GetInviteKey(props) {
           <Input
             style={{ marginTop: 8 }}
             value={state.email}
+            placeholder="ex: mark.walters@protocol.ai"
             onChange={(e) =>
               setState({ ...state, [e.target.name]: e.target.value })
             }
@@ -75,6 +77,7 @@ function GetInviteKey(props) {
           <Input
             style={{ marginTop: 8 }}
             value={state.twitter}
+            placeholder="ex: filecoin"
             onChange={(e) =>
               setState({ ...state, [e.target.name]: e.target.value })
             }

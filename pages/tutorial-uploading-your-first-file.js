@@ -13,6 +13,10 @@ const code = `class Example extends React.Component {
     const formData  = new FormData();
     formData.append("data", e.target.files[0]);
     
+    // NOTE
+    // This example uses XMLHttpRequest() instead of fetch
+    // because we want to show progress. But you can use
+    // fetch in this example if you like.
     const xhr = new XMLHttpRequest();
     
     xhr.upload.onprogress = (e) => {
@@ -35,7 +39,7 @@ const code = `class Example extends React.Component {
 
   render() {
     return (
-      <React.Fragment>>
+      <React.Fragment>
         <input type="file" onChange={this.upload.bind(this)} />
         <br />
         <pre>{JSON.stringify(this.state, null, 1)}</pre>

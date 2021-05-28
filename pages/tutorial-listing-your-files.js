@@ -3,13 +3,31 @@ import styles from "~/pages/Page.module.scss";
 import * as React from "react";
 
 import App from "~/components/App";
+import markdown from "~/documentation/tutorial-listing-your-files.md";
 
-const markdown = `# WIP
+const code = `class Example extends React.Component {
+  componentDidMount() {
+    fetch('https://api.estuary.tech/content/list', {
+      method: "GET",
+      headers: {
+        Authorization: 'Bearer REPLACE_ME_WITH_API_KEY',
+      },
+    })
+      .then(data => {
+        return data.json();
+      })
+      .then(data => {
+        this.setState({ ...data });
+      });
+  }
 
-This page has not been completed yet.
-`;
-const code = null;
-const curl = null;
+  render() {
+    return <pre>{JSON.stringify(this.state, null, 1)}</pre>;
+  }
+}`;
+
+const curl =
+  'curl -X GET -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" https://api.estuary.tech/content/list';
 
 function TutorialListingYourFiles(props) {
   return (

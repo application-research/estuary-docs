@@ -45,7 +45,11 @@ export default function App(props) {
         <link rel="shortcut icon" href="/static/favicon.ico" />
       </Head>
       <div className={styles.container}>
-        <div className={styles.container__left}>Estuary Documentation</div>
+        <div className={styles.container__left}>
+          <a href="/" className={styles.logo}>
+            Estuary Documentation
+          </a>
+        </div>
         <div className={styles.container__right}>
           {/*SearchInput placeholder="Search..." />*/}
         </div>
@@ -132,7 +136,7 @@ export default function App(props) {
             className={styles.sections__index__item}
             href="/api-content-add"
           >
-            /content/add
+            ➟ content/add
           </a>
           <a
             style={
@@ -143,7 +147,7 @@ export default function App(props) {
             className={styles.sections__index__item}
             href="/api-content-stats"
           >
-            /content/stats
+            ➟ content/stats
           </a>
           <a
             style={
@@ -154,7 +158,18 @@ export default function App(props) {
             className={styles.sections__index__item}
             href="/api-content-deals"
           >
-            /content/deals
+            ➟ content/deals
+          </a>
+          <a
+            style={
+              props.active === "api-content-status-id"
+                ? { color: `var(--color-primary)` }
+                : null
+            }
+            className={styles.sections__index__item}
+            href="/api-content-status-id"
+          >
+            ➟ content/status/:id
           </a>
           <a
             style={
@@ -165,7 +180,7 @@ export default function App(props) {
             className={styles.sections__index__item}
             href="/api-public-stats"
           >
-            /public/stats
+            ➟ public/stats
           </a>
           <a
             style={
@@ -176,7 +191,7 @@ export default function App(props) {
             className={styles.sections__index__item}
             href="/api-public-miners-failures"
           >
-            /public/miners/failures/:miner
+            ➟ public/miners/failures/:miner
           </a>
           <a
             style={
@@ -187,7 +202,7 @@ export default function App(props) {
             className={styles.sections__index__item}
             href="/api-public-miners-deals"
           >
-            /public/miners/deals/:miner
+            ➟ public/miners/deals/:miner
           </a>
           <a
             style={
@@ -198,7 +213,7 @@ export default function App(props) {
             className={styles.sections__index__item}
             href="/api-public-miners-stats"
           >
-            /public/miners/stats/:miner
+            ➟ public/miners/stats/:miner
           </a>
 
           <div

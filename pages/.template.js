@@ -2,8 +2,9 @@ import styles from "~/pages/Page.module.scss";
 
 import * as React from "react";
 
-import Markdown from "~/documentation/index.md";
 import App from "~/components/App";
+
+const markdown = ``;
 
 const code = `class Example extends React.Component {
   componentDidMount() {
@@ -32,7 +33,7 @@ function Template(props) {
       description="Template for our documentation site for https://estuary.tech"
       url="https://docs.estuary.tech"
       curl={curl}
-      markdown={Markdown}
+      markdown={markdown}
       code={code}
     ></App>
   );

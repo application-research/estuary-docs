@@ -12,15 +12,16 @@ Feel free to take whatever [we](https://arg.protocol.ai) have built and use it f
 
 The setup of our node has familiar parts for those who are comfortable with IPFS.
 
-- LibP2P key load and initialization.
-- A NAT port map.
-- A connection manager.
-- Blockstore for getting and putting block objects.
-- A distributed hash table (DHT).
-- Bitswap for exchanging blocks to and from peers.
+- [LibP2P](https://github.com/libp2p) protocols and modules for identity, establishing secure and multiplexed connections between peers, and so much more.
+- [go-libp2p-connmgr](https://github.com/libp2p/go-libp2p-connmgr), a package to help manage connections in go-libp2p.
+- [go-ipfs-blockstore](https://github.com/ipfs/go-ipfs-blockstore) a thin wrapper over a datastore, giving a clean interface for Getting and Putting block objects.
+- [go-libp2p-kad-dht](https://github.com/libp2p/go-libp2p-kad-dht). A Kademlia DHT implementation on go-libp2p.
+- [go-bitswap](https://github.com/ipfs/go-bitswap) to acquire blocks requested by the client from the network and to judiciously send blocks in its possession to other peers who want them.
 
 With this setup, we added features that complete the Filecoin storage experience.
 
+- [Lotus-gateway](https://github.com/filecoin-project/lotus) - we use a small portion of Lotus, to read information about the chain and publish messages.
+- [Filclient](https://github.com/application-research/filclient) - a new standalone client library for interacting with the Filecoin storage network.
 - Filecoin wallet for automation and escrow funds.
 - Automated replication till 6 deals are active and on chain. The value is configurable.
 - Deal estimation with USD cost estimation.

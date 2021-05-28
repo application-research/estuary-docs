@@ -24,13 +24,13 @@ function Feedback(props) {
 
   return (
     <App
-      title="Estuary Documentation: Feedbck"
+      title="Estuary Documentation: Feedback"
       description="Fill out this form to give Feedback about https://estuary.tech."
       url="https://docs.estuary.tech/feedback"
       curl={curl}
       markdown={markdown}
       code={code}
-      active="get-an-invite"
+      active="feedback"
     >
       {state.success ? (
         <div className={styles.group}>
@@ -52,6 +52,7 @@ function Feedback(props) {
           <Input
             style={{ marginTop: 8 }}
             value={state.name}
+            placeholder="ex: Jessica Smith"
             onChange={(e) =>
               setState({ ...state, [e.target.name]: e.target.value })
             }
@@ -61,6 +62,7 @@ function Feedback(props) {
           <Input
             style={{ marginTop: 8 }}
             value={state.email}
+            placeholder="ex: jessica.smith@protocol.ai"
             onChange={(e) =>
               setState({ ...state, [e.target.name]: e.target.value })
             }
@@ -70,6 +72,7 @@ function Feedback(props) {
           <Input
             style={{ marginTop: 8 }}
             value={state.twitter}
+            placeholder="ex: filecoin"
             onChange={(e) =>
               setState({ ...state, [e.target.name]: e.target.value })
             }

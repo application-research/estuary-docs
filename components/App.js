@@ -184,6 +184,17 @@ export default function App(props) {
           </a>
           <a
             style={
+              props.active === "api-public-metrics-deals-on-chain"
+                ? { color: `var(--color-primary)` }
+                : null
+            }
+            className={styles.sections__index__item}
+            href="/api-public-metrics-deals-on-chain"
+          >
+            ➟ public/metrics/deals-on-chain
+          </a>
+          <a
+            style={
               props.active === "api-public-miners-failures"
                 ? { color: `var(--color-primary)` }
                 : null

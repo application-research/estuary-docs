@@ -1,8 +1,8 @@
-import styles from "~/pages/Page.module.scss";
+import styles from '~/pages/Page.module.scss';
 
-import * as React from "react";
+import * as React from 'react';
 
-import App from "~/components/App";
+import App from '~/components/App';
 
 const markdown = `# /public/stats
 
@@ -31,7 +31,7 @@ const code = `class Example extends React.Component {
   }
 }`;
 
-const curl = "curl -X GET https://api.estuary.tech/public/stats";
+const curl = 'curl -X GET https://api.estuary.tech/public/stats';
 
 function APIPublicStats(props) {
   return (

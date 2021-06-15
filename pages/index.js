@@ -1,9 +1,9 @@
-import styles from "~/pages/Page.module.scss";
+import styles from '~/pages/Page.module.scss';
 
-import * as React from "react";
+import * as React from 'react';
 
-import Markdown from "~/documentation/index.md";
-import App from "~/components/App";
+import Markdown from '~/documentation/index.md';
+import App from '~/components/App';
 
 const code = `class Example extends React.Component {
   componentDidMount() {

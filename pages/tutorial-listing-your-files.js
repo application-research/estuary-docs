@@ -1,9 +1,9 @@
-import styles from "~/pages/Page.module.scss";
+import styles from '~/pages/Page.module.scss';
 
-import * as React from "react";
+import * as React from 'react';
 
-import App from "~/components/App";
-import markdown from "~/documentation/tutorial-listing-your-files.md";
+import App from '~/components/App';
+import markdown from '~/documentation/tutorial-listing-your-files.md';
 
 const code = `class Example extends React.Component {
   componentDidMount() {

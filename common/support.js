@@ -1,7 +1,7 @@
 export const send = ({ name, email, twitter, message, webhook }) => {
-  let twitterURL = "";
+  let twitterURL = '';
   if (twitter) {
-    const twitterProfileURL = `https://twitter.com/${twitter.replace("@", "")}`;
+    const twitterProfileURL = `https://twitter.com/${twitter.replace('@', '')}`;
     twitterURL = `<${twitterProfileURL}|${twitter}>`;
   }
   try {

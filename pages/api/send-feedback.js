@@ -1,14 +1,14 @@
-const NODE = process.env.NODE_ENV || "development";
-const IS_PRODUCTION = NODE === "production";
+const NODE = process.env.NODE_ENV || 'development';
+const IS_PRODUCTION = NODE === 'production';
 
 if (!IS_PRODUCTION) {
-  require("dotenv").config();
+  require('dotenv').config();
 }
 
-import * as S from "~/common/server";
-import * as Support from "~/common/support";
+import * as S from '~/common/server';
+import * as Support from '~/common/support';
 
-import { IncomingWebhook } from "@slack/webhook";
+import { IncomingWebhook } from '@slack/webhook';
 
 export default async function apiSendFeedback(req, res) {
   await S.cors(req, res);

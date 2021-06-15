@@ -1,8 +1,8 @@
-import styles from "~/components/CodeBlock.module.scss";
+import styles from '~/components/CodeBlock.module.scss';
 
-import * as React from "react";
+import * as React from 'react';
 
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 
 export default function CodeBlock(props) {
   return (

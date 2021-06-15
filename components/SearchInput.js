@@ -1,6 +1,6 @@
-import styles from "~/components/SearchInput.module.scss";
+import styles from '~/components/SearchInput.module.scss';
 
-import * as React from "react";
+import * as React from 'react';
 
 export default function SearchInput(props) {
   return (

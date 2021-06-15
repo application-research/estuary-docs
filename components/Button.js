@@ -1,17 +1,14 @@
-import * as React from "react";
-import * as U from "~/common/utilities";
+import * as React from 'react';
+import * as U from '~/common/utilities';
 
-import styles from "~/components/Button.module.scss";
+import styles from '~/components/Button.module.scss';
 
-import LoaderSpinner from "~/components/LoaderSpinner";
+import LoaderSpinner from '~/components/LoaderSpinner';
 
 const Button = (props) => {
   if (props.loading) {
     return (
-      <button
-        className={U.classNames(styles.button, styles.loading)}
-        style={props.style}
-      >
+      <button className={U.classNames(styles.button, styles.loading)} style={props.style}>
         <LoaderSpinner />
       </button>
     );
@@ -31,14 +28,7 @@ const Button = (props) => {
   }
 
   if (!U.isEmpty(props.href)) {
-    return (
-      <a
-        href={props.href}
-        className={styles.button}
-        children={props.children}
-        {...props}
-      />
-    );
+    return <a href={props.href} className={styles.button} children={props.children} {...props} />;
   }
 
   return (

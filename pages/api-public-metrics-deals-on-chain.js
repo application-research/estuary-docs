@@ -1,8 +1,8 @@
-import styles from "~/pages/Page.module.scss";
+import styles from '~/pages/Page.module.scss';
 
-import * as React from "react";
+import * as React from 'react';
 
-import App from "~/components/App";
+import App from '~/components/App';
 
 const markdown = `# /public/metrics/deals-on-chain
 
@@ -29,8 +29,7 @@ const code = `class Example extends React.Component {
   }
 }`;
 
-const curl =
-  "curl -X GET https://api.estuary.tech/public/metrics/deals-on-chain";
+const curl = 'curl -X GET https://api.estuary.tech/public/metrics/deals-on-chain';
 
 function APIPublicMetricsDealOnChain(props) {
   return (

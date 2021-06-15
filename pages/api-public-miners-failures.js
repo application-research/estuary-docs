@@ -1,8 +1,8 @@
-import styles from "~/pages/Page.module.scss";
+import styles from '~/pages/Page.module.scss';
 
-import * as React from "react";
+import * as React from 'react';
 
-import App from "~/components/App";
+import App from '~/components/App';
 
 const markdown = `# /public/miners/failures/:miner
 
@@ -29,8 +29,7 @@ const code = `class Example extends React.Component {
   }
 }`;
 
-const curl =
-  "curl -X GET https://api.estuary.tech/public/miners/failures/f02387";
+const curl = 'curl -X GET https://api.estuary.tech/public/miners/failures/f02387';
 
 function APIPublicMinerFailures(props) {
   return (

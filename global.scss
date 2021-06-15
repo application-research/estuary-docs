@@ -1,7 +1,6 @@
 @font-face {
-  font-family: "Mono";
-  src: url("https://next-s3-public.s3-us-west-2.amazonaws.com/mono.woff")
-    format("woff");
+  font-family: 'Mono';
+  src: url('https://next-s3-public.s3-us-west-2.amazonaws.com/mono.woff') format('woff');
 }
 
 html,
@@ -112,16 +111,15 @@ body {
   --color-background-body: #ffffff;
   --color-background-code: #282828;
   --color-foreground: #ffffff;
-  --color-border: #cdcdcd;
+  --color-border: rgba(0, 0, 0, 0.1);
   --color-text: #000000;
   --color-text-code: #ffffff;
   --color-primary: rgba(0, 2, 255, 1);
 
   font-size: 16px;
-  background: var(--color-background);
+  background: var(--color-background-body);
   color: var(--color-text);
-  font-family: -apple-system, BlinkMacSystemFont, helvetica neue, helvetica,
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, helvetica neue, helvetica, sans-serif;
   scrollbar-width: none;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 

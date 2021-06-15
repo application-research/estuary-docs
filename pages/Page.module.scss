@@ -47,3 +47,36 @@
   display: flex;
   align-items: flex-start;
 }
+
+.li {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+
+  a {
+    color: rgba(0, 2, 255, 1);
+    font-weight: 600;
+    transition: 200ms ease all;
+    text-decoration: none;
+
+    &:visited {
+      color: rgba(0, 2, 255, 1);
+    }
+
+    &:hover {
+      color: rgba(0, 22, 255, 1);
+    }
+  }
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  padding-left: 24px;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}

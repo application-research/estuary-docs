@@ -1,13 +1,13 @@
-import styles from "~/components/App.module.scss";
-import pkg from "~/package.json";
+import styles from '~/components/App.module.scss';
+import pkg from '~/package.json';
 
-import * as React from "react";
-import * as SVG from "~/components/SVG";
+import * as React from 'react';
+import * as SVG from '~/components/SVG';
 
-import Head from "next/head";
-import SearchInput from "~/components/SearchInput";
-import RichText from "~/components/RichText";
-import CodeBlock from "~/components/CodeBlock";
+import Head from 'next/head';
+import SearchInput from '~/components/SearchInput';
+import RichText from '~/components/RichText';
+import CodeBlock from '~/components/CodeBlock';
 
 export default function App(props) {
   return (
@@ -29,18 +29,8 @@ export default function App(props) {
         <meta property="twitter:description" content={props.description} />
         <meta property="twitter:image" content="/static/social.png" />
 
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/static/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/static/favicon-16x16.png"
-        />
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
 
         <link rel="shortcut icon" href="/static/favicon.ico" />
       </Head>
@@ -50,48 +40,33 @@ export default function App(props) {
             Estuary Documentation
           </a>
         </div>
-        <div className={styles.container__right}>
-          {/*SearchInput placeholder="Search..." />*/}
-        </div>
+        <div className={styles.container__right}>{/*SearchInput placeholder="Search..." />*/}</div>
       </div>
       <div className={styles.sections}>
         <div className={styles.sections__index}>
           <div className={styles.sections__index__title}>Introduction</div>
           <a
-            style={
-              props.active === "what-is-estuary"
-                ? { color: `var(--color-primary)` }
-                : null
-            }
+            style={props.active === 'what-is-estuary' ? { color: `var(--color-primary)` } : null}
             className={styles.sections__index__item}
             href="/"
           >
             What is Estuary?
           </a>
           <a
-            style={
-              props.active === "get-an-invite"
-                ? { color: `var(--color-primary)` }
-                : null
-            }
+            style={props.active === 'get-an-invite' ? { color: `var(--color-primary)` } : null}
             className={styles.sections__index__item}
             href="/get-invite-key"
           >
             Get an invite
           </a>
 
-          <div
-            style={{ marginTop: 48 }}
-            className={styles.sections__index__title}
-          >
+          <div style={{ marginTop: 48 }} className={styles.sections__index__title}>
             Tutorial
           </div>
 
           <a
             style={
-              props.active === "tutorial-get-an-api-key"
-                ? { color: `var(--color-primary)` }
-                : null
+              props.active === 'tutorial-get-an-api-key' ? { color: `var(--color-primary)` } : null
             }
             href="/tutorial-get-an-api-key"
             className={styles.sections__index__item}
@@ -100,7 +75,7 @@ export default function App(props) {
           </a>
           <a
             style={
-              props.active === "tutorial-uploading-your-first-file"
+              props.active === 'tutorial-uploading-your-first-file'
                 ? { color: `var(--color-primary)` }
                 : null
             }
@@ -111,7 +86,7 @@ export default function App(props) {
           </a>
           <a
             style={
-              props.active === "tutorial-listing-your-files"
+              props.active === 'tutorial-listing-your-files'
                 ? { color: `var(--color-primary)` }
                 : null
             }
@@ -121,40 +96,25 @@ export default function App(props) {
             Listing your files
           </a>
 
-          <div
-            style={{ marginTop: 48 }}
-            className={styles.sections__index__title}
-          >
+          <div style={{ marginTop: 48 }} className={styles.sections__index__title}>
             API Documentation
           </div>
           <a
-            style={
-              props.active === "api-content-add"
-                ? { color: `var(--color-primary)` }
-                : null
-            }
+            style={props.active === 'api-content-add' ? { color: `var(--color-primary)` } : null}
             className={styles.sections__index__item}
             href="/api-content-add"
           >
             ➟ content/add
           </a>
           <a
-            style={
-              props.active === "api-content-stats"
-                ? { color: `var(--color-primary)` }
-                : null
-            }
+            style={props.active === 'api-content-stats' ? { color: `var(--color-primary)` } : null}
             className={styles.sections__index__item}
             href="/api-content-stats"
           >
             ➟ content/stats
           </a>
           <a
-            style={
-              props.active === "api-content-deals"
-                ? { color: `var(--color-primary)` }
-                : null
-            }
+            style={props.active === 'api-content-deals' ? { color: `var(--color-primary)` } : null}
             className={styles.sections__index__item}
             href="/api-content-deals"
           >
@@ -162,9 +122,7 @@ export default function App(props) {
           </a>
           <a
             style={
-              props.active === "api-content-status-id"
-                ? { color: `var(--color-primary)` }
-                : null
+              props.active === 'api-content-status-id' ? { color: `var(--color-primary)` } : null
             }
             className={styles.sections__index__item}
             href="/api-content-status-id"
@@ -172,11 +130,7 @@ export default function App(props) {
             ➟ content/status/:id
           </a>
           <a
-            style={
-              props.active === "api-public-stats"
-                ? { color: `var(--color-primary)` }
-                : null
-            }
+            style={props.active === 'api-public-stats' ? { color: `var(--color-primary)` } : null}
             className={styles.sections__index__item}
             href="/api-public-stats"
           >
@@ -184,7 +138,7 @@ export default function App(props) {
           </a>
           <a
             style={
-              props.active === "api-public-metrics-deals-on-chain"
+              props.active === 'api-public-metrics-deals-on-chain'
                 ? { color: `var(--color-primary)` }
                 : null
             }
@@ -195,7 +149,7 @@ export default function App(props) {
           </a>
           <a
             style={
-              props.active === "api-public-miners-failures"
+              props.active === 'api-public-miners-failures'
                 ? { color: `var(--color-primary)` }
                 : null
             }
@@ -206,9 +160,7 @@ export default function App(props) {
           </a>
           <a
             style={
-              props.active === "api-public-miners-deals"
-                ? { color: `var(--color-primary)` }
-                : null
+              props.active === 'api-public-miners-deals' ? { color: `var(--color-primary)` } : null
             }
             className={styles.sections__index__item}
             href="/api-public-miners-deals"
@@ -217,9 +169,7 @@ export default function App(props) {
           </a>
           <a
             style={
-              props.active === "api-public-miners-stats"
-                ? { color: `var(--color-primary)` }
-                : null
+              props.active === 'api-public-miners-stats' ? { color: `var(--color-primary)` } : null
             }
             className={styles.sections__index__item}
             href="/api-public-miners-stats"
@@ -227,10 +177,7 @@ export default function App(props) {
             ➟ public/miners/stats/:miner
           </a>
 
-          <div
-            style={{ marginTop: 48 }}
-            className={styles.sections__index__title}
-          >
+          <div style={{ marginTop: 48 }} className={styles.sections__index__title}>
             Community
           </div>
 
@@ -239,15 +186,10 @@ export default function App(props) {
             className={styles.sections__index__item}
             href="https://github.com/application-research"
           >
-            <SVG.GitHub size="14px" style={{ marginTop: 2, marginRight: 8 }} />{" "}
-            GitHub
+            <SVG.GitHub size="14px" style={{ marginTop: 2, marginRight: 8 }} /> GitHub
           </a>
           <a
-            style={
-              props.active === "feedback"
-                ? { color: `var(--color-primary)` }
-                : null
-            }
+            style={props.active === 'feedback' ? { color: `var(--color-primary)` } : null}
             className={styles.sections__index__item}
             href="/feedback"
           >
@@ -262,11 +204,7 @@ export default function App(props) {
           </a>
         </div>
         <div className={styles.sections__body}>
-          {props.markdown ? (
-            <RichText>{props.markdown}</RichText>
-          ) : (
-            props.children
-          )}
+          {props.markdown ? <RichText>{props.markdown}</RichText> : props.children}
         </div>
         {props.code ? (
           <div className={styles.sections__code}>

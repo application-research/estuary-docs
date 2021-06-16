@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import App from '@components/App';
 
-const markdown = `# /content/stats
+const markdown = `# ➟ /content/stats
 
 Use this endpoint to get all of the available statistics for data retrieved through our [Estuary Node](https://estuary.tech) for your files.
 

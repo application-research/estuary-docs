@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import App from '@components/App';
 
-const markdown = `# /content/status/:id
+const markdown = `# ➟ /content/status/:id
 
 Use this endpoint to get all of the deals being made for a specific Content ID stored on our [Estuary Node](https://estuary.tech). You will also get access to our metadata and additional useful details.
 

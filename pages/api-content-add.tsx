@@ -4,11 +4,11 @@ import * as React from 'react';
 
 import App from '@components/App';
 
-const markdown = `# /content/add
+const markdown = `# ➟ /content/add
 
 Use this endpoint to upload data to the Estuary Node, one file at a time.
 
-For more of an explanation, read [this](https://docs.estuary.tech/tutorial-upload-first-file).
+For more of an explanation, read [this](https://docs.estuary.tech/tutorial-uploading-your-first-file).
 
 ## This page is a work in progress
 

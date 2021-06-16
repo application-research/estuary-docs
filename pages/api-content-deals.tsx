@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import App from '@components/App';
 
-const markdown = `# /content/deals
+const markdown = `# ➟ /content/deals
 
 Use this endpoint to get all of the content on Estuary that is also stored on Filecoin through our [Estuary Node](https://estuary.tech).
 

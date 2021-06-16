@@ -4,9 +4,9 @@ import * as React from 'react';
 
 import App from '@components/App';
 
-const markdown = `# ➟ /public/miners/deals/:miner
+const markdown = `# ➟ /public/miners
 
-Use this endpoint to get all of deal history for a specific miner with our [Estuary Node](https://estuary.tech). This endpoint does not require an API key.
+Use this endpoint to get all the Miners we work with. This endpoint does not require an API key.
 
 ## This page is a work in progress
 
@@ -15,7 +15,7 @@ We will be adding more code examples and more details over time. Thanks for bear
 
 const code = `class Example extends React.Component {
   componentDidMount() {
-    fetch('https://api.estuary.tech/public/miners/deals/f0135078')
+    fetch('https://api.estuary.tech/public/miners')
       .then(data => {
         return data.json();
       })
@@ -29,15 +29,15 @@ const code = `class Example extends React.Component {
   }
 }`;
 
-const curl = 'curl -X GET https://api.estuary.tech/public/miners/deals/f0135078';
+const curl = 'curl -X GET https://api.estuary.tech/public/miners';
 
-function APIPublicMinerDeals(props) {
+function APIPublicMiners(props) {
   return (
     <App
-      title="Estuary Documentation: API: /public/miners/deals"
-      description="https://api.estuary.tech/public/miners/deals:miner"
-      url="https://docs.estuary.tech/api-public-miners-deals"
-      active="api-public-miners-deals"
+      title="Estuary Documentation: API: /public/miners"
+      description="https://api.estuary.tech/public/miners"
+      url="https://docs.estuary.tech/api-public-miners"
+      active="api-public-miners"
       curl={curl}
       markdown={markdown}
       code={code}
@@ -51,4 +51,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default APIPublicMinerDeals;
+export default APIPublicMiners;

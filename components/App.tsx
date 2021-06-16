@@ -9,6 +9,78 @@ import SearchInput from '@components/SearchInput';
 import RichText from '@components/RichText';
 import CodeBlock from '@components/CodeBlock';
 
+const IntroductionSet = [
+  { key: 'what-is-estuary', title: 'What is Estuary?', href: '/' },
+  { key: 'get-an-invite', title: 'Get your invite', href: '/get-invite-key' },
+];
+
+const TutorialSet = [
+  { key: 'tutorial-get-an-api-key', title: 'Get an API key', href: '/tutorial-get-an-api-key' },
+  {
+    key: 'tutorial-uploading-your-first-file',
+    title: 'Uploading your first file',
+    href: '/tutorial-uploading-your-first-file',
+  },
+  {
+    key: 'tutorial-listing-your-files',
+    title: 'Get a list of your files',
+    href: '/tutorial-listing-your-files',
+  },
+];
+
+const APISet = [
+  {
+    key: 'api-content-add',
+    title: '➟ content/add',
+    href: '/api-content-add',
+  },
+  {
+    key: 'api-content-stats',
+    title: '➟ content/stats',
+    href: '/api-content-stats',
+  },
+  {
+    key: 'api-content-deals',
+    title: '➟ content/deals',
+    href: '/api-content-deals',
+  },
+  {
+    key: 'api-content-status-id',
+    title: '➟ content/status/:id',
+    href: '/api-content-status-id',
+  },
+  {
+    key: 'api-public-stats',
+    title: '➟ public/stats',
+    href: '/api-public-stats',
+  },
+  {
+    key: 'api-public-metrics-deals-on-chain',
+    title: '➟ public/metrics/deals-on-chain',
+    href: '/api-public-metrics-deals-on-chain',
+  },
+  {
+    key: 'api-public-miners-failures',
+    title: '➟ public/miners/failures/:miner',
+    href: '/api-public-miners-failures',
+  },
+  {
+    key: 'api-public-miners-deals',
+    title: '➟ public/miners/deals/:miner',
+    href: '/api-public-miners-deals',
+  },
+  {
+    key: 'api-public-miners-stats',
+    title: '➟ public/miners/stats/:miner',
+    href: '/api-public-miners-stats',
+  },
+  {
+    key: 'api-public-miners',
+    title: '➟ public/miners',
+    href: '/api-public-miners',
+  },
+];
+
 export default function App(props) {
   return (
     <React.Fragment>
@@ -45,137 +117,53 @@ export default function App(props) {
       <div className={styles.sections}>
         <div className={styles.sections__index}>
           <div className={styles.sections__index__title}>Introduction</div>
-          <a
-            style={props.active === 'what-is-estuary' ? { color: `var(--color-primary)` } : null}
-            className={styles.sections__index__item}
-            href="/"
-          >
-            What is Estuary?
-          </a>
-          <a
-            style={props.active === 'get-an-invite' ? { color: `var(--color-primary)` } : null}
-            className={styles.sections__index__item}
-            href="/get-invite-key"
-          >
-            Get an invite
-          </a>
+
+          {IntroductionSet.map((x) => {
+            return (
+              <a
+                key={x.key}
+                style={props.active === x.key ? { color: `var(--color-primary)` } : null}
+                className={styles.sections__index__item}
+                href={x.href}
+              >
+                {x.title}
+              </a>
+            );
+          })}
 
           <div style={{ marginTop: 48 }} className={styles.sections__index__title}>
             Tutorial
           </div>
 
-          <a
-            style={
-              props.active === 'tutorial-get-an-api-key' ? { color: `var(--color-primary)` } : null
-            }
-            href="/tutorial-get-an-api-key"
-            className={styles.sections__index__item}
-          >
-            Get an API key
-          </a>
-          <a
-            style={
-              props.active === 'tutorial-uploading-your-first-file'
-                ? { color: `var(--color-primary)` }
-                : null
-            }
-            href="/tutorial-uploading-your-first-file"
-            className={styles.sections__index__item}
-          >
-            Uploading your first file
-          </a>
-          <a
-            style={
-              props.active === 'tutorial-listing-your-files'
-                ? { color: `var(--color-primary)` }
-                : null
-            }
-            href="/tutorial-listing-your-files"
-            className={styles.sections__index__item}
-          >
-            Listing your files
-          </a>
+          {TutorialSet.map((x) => {
+            return (
+              <a
+                key={x.key}
+                style={props.active === x.key ? { color: `var(--color-primary)` } : null}
+                className={styles.sections__index__item}
+                href={x.href}
+              >
+                {x.title}
+              </a>
+            );
+          })}
 
           <div style={{ marginTop: 48 }} className={styles.sections__index__title}>
             API Documentation
           </div>
-          <a
-            style={props.active === 'api-content-add' ? { color: `var(--color-primary)` } : null}
-            className={styles.sections__index__item}
-            href="/api-content-add"
-          >
-            ➟ content/add
-          </a>
-          <a
-            style={props.active === 'api-content-stats' ? { color: `var(--color-primary)` } : null}
-            className={styles.sections__index__item}
-            href="/api-content-stats"
-          >
-            ➟ content/stats
-          </a>
-          <a
-            style={props.active === 'api-content-deals' ? { color: `var(--color-primary)` } : null}
-            className={styles.sections__index__item}
-            href="/api-content-deals"
-          >
-            ➟ content/deals
-          </a>
-          <a
-            style={
-              props.active === 'api-content-status-id' ? { color: `var(--color-primary)` } : null
-            }
-            className={styles.sections__index__item}
-            href="/api-content-status-id"
-          >
-            ➟ content/status/:id
-          </a>
-          <a
-            style={props.active === 'api-public-stats' ? { color: `var(--color-primary)` } : null}
-            className={styles.sections__index__item}
-            href="/api-public-stats"
-          >
-            ➟ public/stats
-          </a>
-          <a
-            style={
-              props.active === 'api-public-metrics-deals-on-chain'
-                ? { color: `var(--color-primary)` }
-                : null
-            }
-            className={styles.sections__index__item}
-            href="/api-public-metrics-deals-on-chain"
-          >
-            ➟ public/metrics/deals-on-chain
-          </a>
-          <a
-            style={
-              props.active === 'api-public-miners-failures'
-                ? { color: `var(--color-primary)` }
-                : null
-            }
-            className={styles.sections__index__item}
-            href="/api-public-miners-failures"
-          >
-            ➟ public/miners/failures/:miner
-          </a>
-          <a
-            style={
-              props.active === 'api-public-miners-deals' ? { color: `var(--color-primary)` } : null
-            }
-            className={styles.sections__index__item}
-            href="/api-public-miners-deals"
-          >
-            ➟ public/miners/deals/:miner
-          </a>
-          <a
-            style={
-              props.active === 'api-public-miners-stats' ? { color: `var(--color-primary)` } : null
-            }
-            className={styles.sections__index__item}
-            href="/api-public-miners-stats"
-          >
-            ➟ public/miners/stats/:miner
-          </a>
+
+          {APISet.map((x) => {
+            return (
+              <a
+                key={x.key}
+                style={props.active === x.key ? { color: `var(--color-primary)` } : null}
+                className={styles.sections__index__item}
+                href={x.href}
+              >
+                {x.title}
+              </a>
+            );
+          })}
 
           <div style={{ marginTop: 48 }} className={styles.sections__index__title}>
             Community

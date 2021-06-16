@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import App from '@components/App';
 
-const markdown = `# /public/miners/failures/:miner
+const markdown = `# ➟ /public/miners/failures/:miner
 
 Use this endpoint to get all of the failure logs for a specific miner. This endpoint does not require an API key.
 

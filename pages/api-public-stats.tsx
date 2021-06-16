@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import App from '@components/App';
 
-const markdown = `# /public/stats
+const markdown = `# ➟ /public/stats
 
 Use this endpoint to get our [Estuary Node's](https://estuary.tech) contribution to the Filecoin Network.
 

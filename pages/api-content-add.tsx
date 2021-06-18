@@ -58,12 +58,7 @@ const code = `class Example extends React.Component {
   }
 }`;
 
-const curl = `curl
- -X POST https://api.estuary.tech/content/add
- -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY"
- -H "Accept: application/json"
- -H "Content-Type: multipart/form-data"
- -F "data=@PATH_TO_FILE_BUT_REMEMBER_THE_@_SYMBOL_IS_REQUIRED"`;
+const curl = `curl -X POST https://api.estuary.tech/content/add -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" -H "Accept: application/json" -H "Content-Type: multipart/form-data" -F "data=@PATH_TO_FILE_BUT_REMEMBER_THE_@_SYMBOL_IS_REQUIRED"`;
 
 function APIContentAdd(props) {
   return (

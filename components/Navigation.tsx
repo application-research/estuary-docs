@@ -30,6 +30,11 @@ const APISet = [
     href: '/api-content-add',
   },
   {
+    key: 'api-content-add-ipfs',
+    title: '➟ content/add-ipfs',
+    href: '/api-content-add-ipfs',
+  },
+  {
     key: 'api-content-stats',
     title: '➟ content/stats',
     href: '/api-content-stats',

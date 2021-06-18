@@ -1,5 +1,5 @@
 .block {
-  padding: 32px 0 0 0;
+  padding: 38px 0 0 0;
   font-size: 0.85rem;
   font-family: 'Mono' !important;
   overflow-wrap: break-word;
@@ -28,6 +28,7 @@
   font-size: 10px;
   text-transform: uppercase;
   font-weight: 600;
+  font-family: 'Mono';
   letter-spacing: 0.2px;
 }
 
@@ -37,10 +38,12 @@
   border-top: #333 1px solid;
   overflow-wrap: break-word;
   white-space: pre-wrap;
+  font-family: 'Mono';
 }
 
 .curl {
   padding: 16px;
+  font-family: 'Mono';
 }
 
 .curl__line {
@@ -48,17 +51,24 @@
   width: 100%;
   white-space: pre-wrap;
   overflow-wrap: break-word;
+  font-family: 'Mono';
 }
 
 .error {
   padding: 16px;
   border-top: #333 1px solid;
+
+  * {
+    font-family: 'Mono';
+  }
 }
 
 .preview {
   padding: 16px;
   border-top: #333 1px solid;
+
   * {
+    font-family: 'Mono';
     overflow-wrap: break-word;
     white-space: pre-wrap;
   }

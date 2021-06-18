@@ -8,15 +8,31 @@ You can run your own Estuary Node (soon). If you don't like code or APIs you can
 
 Feel free to take whatever [we](https://arg.protocol.ai) have built and use it for whatever you need. If you have any questions you can always reach out to [@wwwjim](https://www.twitter.com/wwwjim) and [@whyrusleeping](https://www.twitter.com/whyrusleeping) on Twitter, we are always willing to help.
 
-## Why should I care?
+### Why is any of this important?
 
-[Filecoin](https://filecoin.io) is a breakthrough in decentralized storage network infrastructure and protocols. There are many storage solutions on the internet but none are as advanced as Filecoin with regards to decentralization and transparency. When you store with Filecoin you get to know exactly which provider is storing your data, and the same can not be said about other centralized providers through their products and infrastructure.
+[Filecoin](https://filecoin.io) is a breakthrough in decentralized storage network infrastructure and protocols. There are many storage solutions on the internet but none are as advanced as Filecoin with regards to decentralization and transparency.
 
-That being said, if you are content with opaque systems, something as transparent and globally operated like Filecoin may not appeal to you.
+[Learn why we made Estuary to support the Filecoin story.](https://docs.estuary.tech/what-is-estuary)
 
-[Learn why we made Estuary.](https://docs.estuary.tech/what-is-estuary)
+### How does Estuary handle retrieval?
 
-## How does Estuary use Filecoin and IPFS
+A person requests for their data, example: [cid:Qmch2cHCE4WXV32vyaLgWXYqE7VSLYwrT7xJ6tpxqq3NP5](https://dweb.link/ipfs/Qmch2cHCE4WXV32vyaLgWXYqE7VSLYwrT7xJ6tpxqq3NP5).
+
+**Case A**
+
+- That data is already pinned to an IPFS/Estuary node.
+- The CID is served back to the requester immediately.
+
+**Case B**
+
+- That data is not pinned to an IPFS/Estuary node
+- The Estuary node makes a retrieval deal against a Filecoin miner using Filecoin it has in escrow.
+- Once the retrieval deal is successful, that data is pinned to the node.
+- The CID is served back to the requester.
+
+Need more details? Check out the [source code](https://github.com/application-research/estuary/blob/master/retrieval.go).
+
+### How does Estuary use Filecoin and IPFS?
 
 The setup of our node has familiar parts for those who are comfortable with IPFS.
 
@@ -38,7 +54,9 @@ With this setup, we added features that complete the Filecoin storage experience
 - Miner logs and performance tracking.
 - Deal lookup by ID.
 
-## How do I start?
+Not enough? Read the [code](https://github.com/application-research/estuary/blob/master/main.go). Everything we used to build Estuary is there.
+
+### How do I start?
 
 Check out our tutorial section to get started! We will walk you
 through getting your first API key and making your first API call against our [https://estuary.tech](https://estuary.tech) node.

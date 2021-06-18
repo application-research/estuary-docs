@@ -22,13 +22,19 @@ export default function App(props) {
         <meta property="og:url" content={props.url} />
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
-        <meta property="og:image" content="/static/social.png" />
+        <meta
+          property="og:image"
+          content="https://next-s3-public.s3.us-west-2.amazonaws.com/social/filecoin.hd.png"
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={props.url} />
         <meta property="twitter:title" content={props.title} />
         <meta property="twitter:description" content={props.description} />
-        <meta property="twitter:image" content="/static/social.png" />
+        <meta
+          property="twitter:image"
+          content="https://next-s3-public.s3.us-west-2.amazonaws.com/social/filecoin.hd.png"
+        />
 
         <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />

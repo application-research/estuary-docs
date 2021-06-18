@@ -1,36 +1,6 @@
 .group {
   padding: 24px 24px 88px 24px;
-
-  h2 {
-    display: block;
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin-top: 24px;
-  }
-
-  p {
-    max-width: 568px;
-    display: block;
-    margin-top: 16px;
-    font-size: 1rem;
-    line-height: 1.55;
-    opacity: 0.7;
-  }
-
-  a {
-    color: var(--color-primary);
-    font-weight: 400;
-    transition: 200ms ease all;
-    text-decoration: none;
-
-    &:visited {
-      color: var(--color-primary);
-    }
-
-    &:hover {
-      color: rgba(0, 22, 255, 1);
-    }
-  }
+  max-width: 768px;
 }
 
 .title {
@@ -46,37 +16,4 @@
   margin-top: 24px;
   display: flex;
   align-items: flex-start;
-}
-
-.li {
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
-  margin: 0;
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
-
-  a {
-    color: rgba(0, 2, 255, 1);
-    font-weight: 600;
-    transition: 200ms ease all;
-    text-decoration: none;
-
-    &:visited {
-      color: rgba(0, 2, 255, 1);
-    }
-
-    &:hover {
-      color: rgba(0, 22, 255, 1);
-    }
-  }
-}
-
-.ul {
-  display: flex;
-  flex-direction: column;
-  margin-top: 16px;
-  padding-left: 24px;
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
 }

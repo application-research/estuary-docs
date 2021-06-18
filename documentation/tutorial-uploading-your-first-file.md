@@ -1,4 +1,4 @@
-# Uploading your first file
+# Uploading your file
 
 Once you have an API key, you can use the code shown to upload a file to the Filecoin Network. There are a couple of caveats
 
@@ -24,6 +24,6 @@ fetch('https://api.estuary.tech/content/add', {
 })
 ```
 
-## Congrats! You're done
+### What is next?
 
 Next, we will learn how to [get a list of the data you have uploaded](https://docs.estuary.tech/tutorial-listing-your-files).

@@ -8,7 +8,7 @@ const markdown = `# ➟ /content/app-ipfs
 
 Use this endpoint to take an existing IPFS CID, and make storage deals for it.
 
-* Here is an example of a CID I use [bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe](https://bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe.ipfs.dweb.link/)
+* Here is an example of a CID [bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe](https://bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe.ipfs.dweb.link/)
 
 ## This page is a work in progress
 

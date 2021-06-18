@@ -4,7 +4,7 @@ As a developer you have probably used API keys before. Estuary provides a unique
 
 If you don't know what an API key is, this tutorial will be challenging for you, but you can reach out to us if you're stuck. API keys are the standard way to authenticate a project with an API rather than a human user. **It is also important you understand how to protect your API key/secrets from bad actors and abuse**. If this concept is foreign to you, you might be better off just using [https://estuary.tech](https://estuary.tech) and storing data through our website.
 
-## Getting started
+### Getting started
 
 Before we start, make sure you have done the following:
 
@@ -16,7 +16,7 @@ Before we start, make sure you have done the following:
 
 If you're ready, let's begin!
 
-## Sign in to Estuary
+### Sign in to Estuary
 
 When you sign in to Estuary, you should should land on this page.
 
@@ -24,16 +24,16 @@ When you sign in to Estuary, you should should land on this page.
 
 Click on API keys.
 
-## Generate an API key
+### Generate an API key
 
 On this screen you should see a button to generate an API key, click it.
 
 ![https://next-s3-public.s3-us-west-2.amazonaws.com/estuary-marketing-hero.png](https://next-s3-public.s3-us-west-2.amazonaws.com/estuary-tutorial/tutorial-1.png)
 
-## Test your API key
+### Test your API key
 
 Use your new API key on the screen to the right by replacing the string **REPLACE_ME_WITH_API_KEY** with your API key.
 
-## You're done!
+### What is next?
 
 Now you are ready for the next part, [uploading your first file.](https://docs.estuary.tech/tutorial-uploading-your-first-file).

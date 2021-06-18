@@ -1,4 +1,5 @@
 import styles from '@pages/Page.module.scss';
+import rstyles from '@components/RichText.module.scss';
 
 import * as React from 'react';
 import * as U from '@common/utilities';
@@ -33,16 +34,16 @@ function GetInviteKey(props) {
       active="get-an-invite"
     >
       {state.success ? (
-        <div className={styles.group}>
-          <h2>Thank you!</h2>
+        <div className={U.classNames(styles.group, rstyles.block)}>
+          <h1 style={{ marginTop: 22 }}>Thank you!</h1>
           <p>
             Everyone on our team will get a chance to read this request for an invite. Thank you for
             submitting it!
           </p>
         </div>
       ) : (
-        <div className={styles.group}>
-          <h2>Request invite</h2>
+        <div className={U.classNames(styles.group, rstyles.block)}>
+          <h1 style={{ marginTop: 22 }}>Request invite</h1>
           <p>
             Would you like to use{' '}
             <a href="https://estuary.tech" target="_blank">

@@ -24,6 +24,7 @@ export default function CodeBlock(props) {
               paddingRight: 0,
               paddingBottom: 0,
               paddingTop: 0,
+              fontFamily: 'Mono',
             }}
           />
         </div>

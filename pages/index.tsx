@@ -25,17 +25,18 @@ const code = `class Example extends React.Component {
 }`;
 
 const curl = `curl -X GET https://api.estuary.tech/public/stats`;
+const key = `introduction`;
 
 function Home(props) {
   return (
     <App
-      title="Estuary Documentation: What is Estuary?"
+      title="Estuary Documentation"
       description="Estuary is a simple IPFS node that integrates a minimal Filecoin Client Library. Both are open source and available to you."
       url="https://docs.estuary.tech"
       curl={curl}
       markdown={Markdown}
       code={code}
-      active="what-is-estuary"
+      active={key}
     ></App>
   );
 }

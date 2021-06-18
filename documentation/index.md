@@ -1,4 +1,4 @@
-# What is Estuary?
+# Welcome!
 
 Estuary is a simple IPFS node that integrates a minimal Filecoin Client Library. Both are open source and available to you on the [Application Research Group's GitHub](https://github.com/application-research/).
 

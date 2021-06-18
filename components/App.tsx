@@ -10,7 +10,8 @@ import RichText from '@components/RichText';
 import CodeBlock from '@components/CodeBlock';
 
 const IntroductionSet = [
-  { key: 'what-is-estuary', title: 'What is Estuary?', href: '/' },
+  { key: 'introduction', title: 'Introduction', href: '/' },
+  { key: 'what-is-estuary', title: 'What is Estuary?', href: '/what-is-estuary' },
   { key: 'get-an-invite', title: 'Get your invite', href: '/get-invite-key' },
 ];
 

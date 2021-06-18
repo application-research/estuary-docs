@@ -59,7 +59,7 @@ function TutorialUploadingYourFirstFile(props) {
   return (
     <App
       title="Estuary Documentation: Tutorial: Uploading Your First File"
-      description="Tutorial Part 2: Uploading your first file to the network."
+      description="Tutorial Part 2: Uploading your first file to the Filecoin Network through Estuary."
       url="https://docs.estuary.tech/tutorial-uploading-your-first-file"
       curl={curl}
       markdown={markdown}

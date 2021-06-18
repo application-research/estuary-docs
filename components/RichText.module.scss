@@ -27,8 +27,9 @@
 
   h3 {
     display: block;
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 600;
+    margin-top: 24px;
     overflow-wrap: break-word;
     white-space: pre-wrap;
   }
@@ -159,7 +160,7 @@
   code {
     display: block;
     white-space: pre-wrap;
-    font-family: "Mono";
+    font-family: 'Mono';
     width: 100%;
   }
 }

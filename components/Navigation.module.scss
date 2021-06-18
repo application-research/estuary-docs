@@ -1,0 +1,37 @@
+.sections__index__title {
+  font-size: 12px;
+  margin-top: 2px;
+  opacity: 0.4;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+
+  @media (max-width: 1280px) {
+    font-size: 10px;
+  }
+}
+
+.sections__index__item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  transition: 200ms ease all;
+  transition-property: color, opacity;
+  text-decoration: none;
+  color: var(--color-text);
+
+  &:visited {
+    color: var(--color-text);
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 12px;
+  }
+}

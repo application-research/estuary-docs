@@ -14,6 +14,8 @@ Feel free to take whatever [we](https://arg.protocol.ai) have built and use it f
 
 That being said, if you are content with opaque systems, something as transparent and globally operated like Filecoin may not appeal to you.
 
+[Learn why we made Estuary.](https://docs.estuary.tech/what-is-estuary)
+
 ## How does Estuary use Filecoin and IPFS
 
 The setup of our node has familiar parts for those who are comfortable with IPFS.

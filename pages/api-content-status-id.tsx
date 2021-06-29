@@ -10,7 +10,7 @@ Use this endpoint to get all of the deals being made for a specific Content ID s
 
 * Content IDs can be obtained by using [https://api.estuary.tech/content/deals](https://docs.estuary.tech/api-content-deals).
 
-## This page is a work in progress
+### This page is a work in progress
 
 We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).
 `;

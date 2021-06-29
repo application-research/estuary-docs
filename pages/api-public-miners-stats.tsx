@@ -8,7 +8,7 @@ const markdown = `# ➟ /public/miners/stats/:miner
 
 Use this endpoint to get all statistics we have for a given miner. This endpoint does not require an API key.
 
-## This page is a work in progress
+### This page is a work in progress
 
 We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).
 `;

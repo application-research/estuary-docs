@@ -4,32 +4,35 @@ import * as React from 'react';
 
 import App from '@components/App';
 
-const markdown = `# ➟ /content/app-ipfs
+const markdown = `# ➟ /pinning/pins
 
-Use this endpoint to take an existing IPFS CID, and make storage deals for it.
+Add a new pin object for the current access token.
 
 * Here is an example of a CID [bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe](https://bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe.ipfs.dweb.link/)
+
+### Need more information?
+
+Check out the [offical IPFS Pinning documentation](https://ipfs.github.io/pinning-services-api-spec/#tag/pins/paths/~1pins/post). We made sure the follow the standards.
 
 ### This page is a work in progress
 
 We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).
 `;
-
-const key = `api-content-add-ipfs`;
-
-const CID = 'bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe';
+const cid = 'bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe';
 const name = '1882818-2021-nature-videos.zip';
+const key = 'pinning-add';
+const route = 'https://api.estuary.tech/pinning/pins';
 
 const code = `class Example extends React.Component {
   componentDidMount() {
-    fetch('https://api.estuary.tech/content/add-ipfs', {
-      method: "POST",
+    fetch('${route}', {
+      method: 'POST',
       headers: {
         Authorization: 'Bearer REPLACE_ME_WITH_API_KEY',
       },
       body: JSON.stringify({
         name: '${name}',
-        root: '${CID}',
+        cid: '${cid}',
       })
     })
       .then(data => {
@@ -45,15 +48,14 @@ const code = `class Example extends React.Component {
   }
 }`;
 
-const curl = `curl -X POST https://api.estuary.tech/content/add-ipfs -d '{ "name": "${name}", "root": "${CID}" }' -H "Content-Type: application/json" -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY"`;
+const curl = `curl -X POST ${route} -d '{ "name": "${name}", "cid": "${cid}" }' -H "Content-Type: application/json" -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY"`;
 
-function APIContentAddIPFS(props) {
+function PinningAdd(props) {
   return (
     <App
-      title="Estuary Documentation: API: /content/add-ipfs"
-      description="https://api.estuary.tech/content/add-ipfs"
+      title="Estuary Documentation: Pinning: Add"
+      description="Add a new pin object for the current access token."
       url={`https://docs.estuary.tech/${key}`}
-      active={key}
       curl={curl}
       markdown={markdown}
       code={code}
@@ -67,4 +69,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default APIContentAddIPFS;
+export default PinningAdd;

@@ -4,23 +4,42 @@ import * as React from 'react';
 import * as SVG from '@components/SVG';
 
 const IntroductionSet = [
-  { key: 'introduction', title: 'Introduction', href: '/' },
-  { key: 'what-is-estuary', title: 'What is Estuary?', href: '/what-is-estuary' },
-  { key: 'get-an-invite', title: 'Get your invite', href: '/get-invite-key' },
+    { 
+        key: 'sign-up', 
+        title: 'Sign up', 
+        href: '/sign-up' 
+    },
+    { 
+        key: 'tutorial-get-an-api-key', 
+        title: 'Get an API key', 
+        href: '/tutorial-get-an-api-key' 
+    },
+    {
+        key: 'tutorial-uploading-your-first-file',
+        title: 'Upload a file',
+        href: '/tutorial-uploading-your-first-file',
+    },
+    {
+        key: 'tutorial-listing-your-files',
+        title: 'List your files',
+        href: '/tutorial-listing-your-files',
+    },
 ];
 
+const AboutSet = [
+    { 
+        key: 'what-is-estuary', 
+        title: 'What is Estuary?', 
+        href: '/what-is-estuary' 
+    },
+    { 
+        key: 'what-is-estuary', 
+        title: 'API limits', 
+        href: '/what-is-estuary' 
+    },
+]
+
 const TutorialSet = [
-  { key: 'tutorial-get-an-api-key', title: 'Get an API key', href: '/tutorial-get-an-api-key' },
-  {
-    key: 'tutorial-uploading-your-first-file',
-    title: 'Uploading your first file',
-    href: '/tutorial-uploading-your-first-file',
-  },
-  {
-    key: 'tutorial-listing-your-files',
-    title: 'Get a list of your files',
-    href: '/tutorial-listing-your-files',
-  },
 ];
 
 const APISet = [
@@ -128,7 +147,7 @@ const PinningStandardSet = [
 export default function Navigation(props) {
   return (
     <React.Fragment>
-      <div className={styles.sections__index__title}>Introduction</div>
+      <div className={styles.sections__index__title}>Get started</div>
 
       {IntroductionSet.map((x) => {
         return (
@@ -144,10 +163,10 @@ export default function Navigation(props) {
       })}
 
       <div style={{ marginTop: 48 }} className={styles.sections__index__title}>
-        Tutorial
+        About 
       </div>
 
-      {TutorialSet.map((x) => {
+      {AboutSet.map((x) => {
         return (
           <a
             key={x.key}

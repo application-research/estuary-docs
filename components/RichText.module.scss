@@ -1,5 +1,5 @@
 .container {
-  padding: 48px 48px 88px 16px;
+  padding: 48px 48px 88px 24px;
   width: 100%;
   max-width: 832px;
 }
@@ -12,16 +12,16 @@
 
   h1 {
     display: block;
-    font-size: 3rem;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 2.35rem;
     overflow-wrap: break-word;
     white-space: pre-wrap;
   }
 
   h2 {
     display: block;
-    font-size: 2.25rem;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 1.5rem;
     margin-top: 48px;
     overflow-wrap: break-word;
     white-space: pre-wrap;
@@ -29,8 +29,8 @@
 
   h3 {
     display: block;
-    font-size: 1.5rem;
     font-weight: 600;
+    font-size: 1.25rem;
     margin-top: 32px;
     overflow-wrap: break-word;
     white-space: pre-wrap;
@@ -38,25 +38,9 @@
 
   h4 {
     display: block;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 24px;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-  }
-
-  h5 {
-    display: block;
     font-size: 1rem;
     font-weight: 600;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-  }
-
-  h6 {
-    display: block;
-    font-size: 0.875rem;
-    font-weight: 600;
+    margin-top: 24px;
     overflow-wrap: break-word;
     white-space: pre-wrap;
   }

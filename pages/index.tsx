@@ -31,7 +31,7 @@ function Home(props) {
   return (
     <App
       title="Estuary Documentation"
-      description="Estuary is a simple IPFS node that integrates a minimal Filecoin Client Library. Both are open source and available to you."
+      description="Store your public data. Estuary is a custom Filecoin/IPFS node that makes storing meaningful publicly licensed data on the Filecoin Network easier."
       url="https://docs.estuary.tech"
       curl={curl}
       markdown={Markdown}

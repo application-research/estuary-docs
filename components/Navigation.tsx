@@ -6,19 +6,19 @@ import * as SVG from '@components/SVG';
 const IntroductionSet = [
   { key: 'introduction', title: 'Introduction', href: '/' },
   { key: 'what-is-estuary', title: 'What is Estuary?', href: '/what-is-estuary' },
-  { key: 'get-an-invite', title: 'Get your invite', href: '/get-invite-key' },
+  { key: 'get-an-invite', title: 'Get an invite', href: '/get-invite-key' },
 ];
 
 const TutorialSet = [
-  { key: 'tutorial-get-an-api-key', title: 'Get an API key', href: '/tutorial-get-an-api-key' },
+  { key: 'tutorial-get-an-api-key', title: 'Get API access', href: '/tutorial-get-an-api-key' },
   {
     key: 'tutorial-uploading-your-first-file',
-    title: 'Uploading your first file',
+    title: 'Upload data',
     href: '/tutorial-uploading-your-first-file',
   },
   {
     key: 'tutorial-listing-your-files',
-    title: 'Get a list of your files',
+    title: 'List data',
     href: '/tutorial-listing-your-files',
   },
 ];
@@ -26,7 +26,7 @@ const TutorialSet = [
 const APISet = [
   {
     key: 'api-content-add',
-    title: '➟ Add file',
+    title: '➟ Add data',
     href: '/api-content-add',
     method: 'POST',
   },
@@ -38,25 +38,25 @@ const APISet = [
   },
   {
     key: 'api-content-stats',
-    title: '➟ Get stats',
+    title: '➟ List data',
     href: '/api-content-stats',
     method: 'GET',
   },
   {
     key: 'api-content-deals',
-    title: '➟ Get all deals',
+    title: '➟ List deals',
     href: '/api-content-deals',
     method: 'GET',
   },
   {
     key: 'api-content-status-id',
-    title: '➟ Deal status by ID',
+    title: '➟ Get deal status by id',
     href: '/api-content-status-id',
     method: 'GET',
   },
   {
     key: 'api-public-stats',
-    title: '➟ Get Estuary node metrics',
+    title: '➟ Get Estuary node stats',
     href: '/api-public-stats',
     method: 'GET',
   },
@@ -68,25 +68,25 @@ const APISet = [
   },
   {
     key: 'api-public-miners-failures',
-    title: '➟ Get failure logs by miner',
+    title: '➟ Get failure logs by provider',
     href: '/api-public-miners-failures',
     method: 'GET',
   },
   {
     key: 'api-public-miners-deals',
-    title: '➟ Get deal logs by miner',
+    title: '➟ Get deal logs by provider',
     href: '/api-public-miners-deals',
     method: 'GET',
   },
   {
     key: 'api-public-miners-stats',
-    title: '➟ Get miner metrics',
+    title: '➟ Get provider stats',
     href: '/api-public-miners-stats',
     method: 'GET',
   },
   {
     key: 'api-public-miners',
-    title: '➟ Get all miners',
+    title: '➟ List providers',
     href: '/api-public-miners',
     method: 'GET',
   },
@@ -95,31 +95,31 @@ const APISet = [
 const PinningStandardSet = [
   {
     key: 'pinning-list',
-    title: '➟ List',
+    title: '➟ List pins',
     href: '/pinning-list',
     method: 'GET',
   },
   {
     key: 'pinning-add',
-    title: '➟ Add',
+    title: '➟ Add pin',
     href: '/pinning-add',
     method: 'POST',
   },
   {
     key: 'pinning-get',
-    title: '➟ Get by ID',
+    title: '➟ Get pin by ID',
     href: '/pinning-get',
     method: 'GET',
   },
   {
     key: 'pinning-replace',
-    title: '➟ Replace by ID',
+    title: '➟ Replace pin by ID',
     href: '/pinning-replace',
     method: 'POST',
   },
   {
     key: 'pinning-remove-by-id',
-    title: '➟ Remove by ID',
+    title: '➟ Remove pin by ID',
     href: '/pinning-remove',
     method: 'DELETE',
   },
@@ -175,7 +175,7 @@ export default function Navigation(props) {
             {x.method ? (
               <span
                 className={styles.method}
-                style={props.active === x.key ? { background: `var(--color-primary)` } : null}
+                style={props.active === x.key ? { color: `var(--color-primary)` } : null}
               >
                 {x.method}
               </span>
@@ -200,7 +200,7 @@ export default function Navigation(props) {
             {x.method ? (
               <span
                 className={styles.method}
-                style={props.active === x.key ? { background: `var(--color-primary)` } : null}
+                style={props.active === x.key ? { color: `var(--color-primary)` } : null}
               >
                 {x.method}
               </span>

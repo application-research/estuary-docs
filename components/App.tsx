@@ -43,13 +43,16 @@ export default function App(props) {
       </Head>
       <div className={styles.container}>
         <div className={styles.container__left}>
-          <a href="/" className={styles.logo}>
-            Estuary Documentation
+          <a href="https://estuary.tech" className={styles.logo}>
+            Estuary
           </a>
         </div>
         <div className={styles.container__right}>
+          <a href="/" className={styles.link}>
+            Documentation
+          </a>
           {props.hideNavigation ? null : (
-            <a href="/navigation" className={styles.link}>
+            <a href="/navigation" className={styles.mobileLink}>
               Menu
             </a>
           )}

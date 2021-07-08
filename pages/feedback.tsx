@@ -49,7 +49,9 @@ function Feedback(props) {
             with you for further questions!
           </p>
 
-          <div className={styles.title}>Name</div>
+          <div className={styles.title} style={{ marginTop: 48 }}>
+            Name
+          </div>
           <Input
             style={{ marginTop: 8 }}
             value={state.name}

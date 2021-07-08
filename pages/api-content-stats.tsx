@@ -6,11 +6,7 @@ import App from '@components/App';
 
 const markdown = `# ➟ /content/stats
 
-Use this endpoint to get all of the available statistics for data retrieved through our [Estuary Node](https://estuary.tech) for your files.
-
-* Total bandwidth used
-* Total requests
-* Is the CID still pinned?
+Use this endpoint to list all of the data you have pinned to Estuary.
 
 ### This page is a work in progress
 
@@ -19,7 +15,7 @@ We will be adding more code examples and more details over time. Thanks for bear
 
 const code = `class Example extends React.Component {
   componentDidMount() {
-    fetch('https://api.estuary.tech/content/stats', {
+    fetch('https://api.estuary.tech/content/stats?offset=0&limit=500', {
       method: "GET",
       headers: {
         Authorization: 'Bearer REPLACE_ME_WITH_API_KEY',

@@ -17,7 +17,6 @@
   justify-content: space-between;
   padding: 8px 16px 8px 16px;
   font-weight: 600;
-  font-size: 12px;
 
   @media (max-width: 1280px) {
     width: 216px;
@@ -33,14 +32,10 @@
   min-width: 10%;
   border-right: 1px solid var(--color-border);
   background: var(--color-foreground);
-  display: none;
   align-items: center;
+  display: flex;
   justify-content: flex-end;
   padding: 8px 16px 8px 16px;
-
-  @media (max-width: 840px) {
-    display: flex;
-  }
 }
 
 .sections {
@@ -60,7 +55,7 @@
   flex-shrink: 0;
   height: 100%;
   overflow-y: scroll;
-  padding: 48px 16px 88px 16px;
+  padding: 32px 0px 88px 0px;
   border-right: 1px solid var(--color-border);
   background: var(--color-foreground);
 
@@ -128,6 +123,8 @@
   transition-property: color, opacity;
   text-decoration: none;
   color: var(--color-text);
+  font-weight: 600;
+  font-size: 14px;
 
   &:visited {
     color: var(--color-text);
@@ -142,8 +139,32 @@
   transition: 200ms ease all;
   transition-property: color, opacity;
   text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 14px;
+
+  &:visited {
+    color: var(--color-primary);
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.mobileLink {
+  transition: 200ms ease all;
+  transition-property: color, opacity;
+  text-decoration: none;
   color: var(--color-text);
   font-weight: 600;
+  font-size: 14px;
+  margin-left: 24px;
+  display: none;
+
+  @media (max-width: 840px) {
+    display: inline-flex;
+  }
 
   &:visited {
     color: var(--color-text);

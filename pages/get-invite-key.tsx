@@ -98,6 +98,10 @@ function GetInviteKey(props) {
             <li className={styles.li}>
               If you wish to use Estuary for private data, make sure you encrypt it first.
             </li>
+            <li className={styles.li}>
+              We are in the early stages of Estuary development and we have a preference for clients
+              who want to store public data that is meant to be accessed by anyone.
+            </li>
           </ul>
 
           <div className={styles.action}>

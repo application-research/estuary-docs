@@ -2,11 +2,13 @@
 
 Estuary provides decentralized storage for all applications and makes it as simple as possible to upload and retrieve files. No additional infrastructure is required.
 
-Estuary relies on the [Filecoin](https://filecoin.io) Network for presistent, decentralized storage and the IPFS protocol for content addressing and cached retrievals. We created a new type of network node to do this and we expect network operators will want to run their own. Our goal is to keep it simple for everyone, while our [team](https://arg.protocol.ai) handles the complexity behind the scenes.
+Estuary relies on the [Filecoin](https://filecoin.io) Network for presistent, interoperable, verifiable and provable decentralized storage. Estuary uses IPFS and other [protocols](https://github.com/application-research/estuary/blob/master/main.go) for content addressing and cached retrievals.
+
+Estuary is a new type of network node.
 
 #### Getting started
 
-- Visit our [website](https://estuary.tech) to upload files. This is our hosted infrastructure we provide for everyone.
+- Visit our [website](https://estuary.tech) to upload files to our hosted Estuary node.
 - Try our API right here!
 
 Curious about how Estuary works? Read about it [here](https://docs.estuary.tech/what-is-estuary).
@@ -45,9 +47,3 @@ If you are a network operator like [Pinata](https://pinata.cloud), [Fission](htt
 
 - Coming soon.
 - Follow development [here](https://github.com/application-research/estuary).
-
-### Terms of service
-
-The following terms and conditions govern all use of "ESTUARY.TECH" and "API.ESTUARY.TECH" (the "Website") and all content, services, and products available at or through the website. The website is offered subject to your acceptance without modification of all of the terms and conditions contained herein. As all data uploaded to https://estuary.tech will be stored on IPFS and Filecoin, this website incorporates the Terms of Service of [https://ipfs.io](https://ipfs.io).
-
-If you do not agree to all the terms and conditions of this agreement, then you may not access the Website or use any services.

@@ -231,6 +231,9 @@ export default function Navigation(props) {
       <a target="_blank" className={styles.sections__index__item} href="https://filecoin.io/slack">
         Join Slack (#arg)
       </a>
+      <a className={styles.sections__index__item} href="/terms">
+        Terms of Service
+      </a>
     </React.Fragment>
   );
 }

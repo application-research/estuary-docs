@@ -67,6 +67,12 @@ const APISet = [
     method: 'GET',
   },
   {
+    key: 'api-public-miners-ask',
+    title: '➟ Get miner query ask',
+    href: '/api-public-miners-ask',
+    method: 'GET',
+  },
+  {
     key: 'api-public-miners-failures',
     title: '➟ Get failure logs by provider',
     href: '/api-public-miners-failures',

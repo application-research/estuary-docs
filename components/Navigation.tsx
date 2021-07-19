@@ -37,6 +37,12 @@ const APISet = [
     method: 'POST',
   },
   {
+    key: 'api-content-by-cid',
+    title: '➟ Data by CID',
+    href: '/api-content-by-cid',
+    method: 'GET',
+  },
+  {
     key: 'api-content-stats',
     title: '➟ List data',
     href: '/api-content-stats',

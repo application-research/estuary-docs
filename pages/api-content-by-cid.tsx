@@ -15,7 +15,7 @@ We will be adding more code examples and more details over time. Thanks for bear
 
 const code = `class Example extends React.Component {
   componentDidMount() {
-    fetch('https://api.estuary.tech/content/by-cid/bafybeib6c6x4ck65yeazd6mnh3tc65ftasvte7mt6kjiluucfvaquqo5du',{
+    fetch('https://api.estuary.tech/content/by-cid/QmQTi9dkvZtHoWdiDT5LYPoe9G3yL9AzPTR9V2nPr8DAaN',{
         method: "GET",
         headers: {
           Authorization: 'Bearer REPLACE_ME_WITH_API_KEY',
@@ -35,7 +35,7 @@ const code = `class Example extends React.Component {
 }`;
 
 const curl =
-  'curl -X GET -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" https://api.estuary.tech/content/by-cid/bafybeib6c6x4ck65yeazd6mnh3tc65ftasvte7mt6kjiluucfvaquqo5du';
+  'curl -X GET -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" https://api.estuary.tech/content/by-cid/QmQTi9dkvZtHoWdiDT5LYPoe9G3yL9AzPTR9V2nPr8DAaN';
 
 function APIContentByCID(props) {
   return (

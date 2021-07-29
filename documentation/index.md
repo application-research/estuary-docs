@@ -1,15 +1,17 @@
 # Introduction
 
-Estuary provides decentralized storage for all applications and makes it as simple as possible to upload and retrieve files. No additional infrastructure is required.
+Estuary is the most reliable and simple way to upload public data to the Filecoin Network.
 
-Estuary relies on the [Filecoin](https://filecoin.io) Network for presistent, interoperable, verifiable and provable decentralized storage. Estuary uses IPFS and other [protocols](https://github.com/application-research/estuary/blob/master/main.go) for content addressing and cached retrievals.
+You can use this Estuary Node [(https://estuary.tech)](https://estuary.tech) that the [ARG](https://arg.protocol.ai) operates or you can run your own Estuary Node.
 
-Estuary is a new type of network node.
+Estuary Nodes are a new type of network node. These nodes provide decentralized storage for all developers using it, and each node turns uploading data and retieving data into a simpler problem for everyone. Your users will not need any additional infrastructure.
+
+Estuary Nodes depend on the [Filecoin](https://filecoin.io) Network for presistent, interoperable, verifiable and provable decentralized storage. Estuary Nodes use IPFS and other [protocols](https://github.com/application-research/estuary/blob/master/main.go) for content addressing and cached retrievals.
 
 #### Getting started
 
-- Visit our [website](https://estuary.tech) to upload files to our hosted Estuary node.
-- Try our API right here!
+- Visit the [website](https://estuary.tech) to upload files to our hosted Estuary node.
+- Try our API, here.
 
 Curious about how Estuary works? Read about it [here](https://docs.estuary.tech/what-is-estuary).
 
@@ -21,7 +23,7 @@ Curious about how Estuary works? Read about it [here](https://docs.estuary.tech/
 
 ### Why would I use https://estuary.tech?
 
-If you are a human who wants to upload public data sets to the internet, our website is a solution to that problem.
+If you are a human who wants to upload public data sets to the internet, our Estuary Node is a solution to that problem.
 
 - Go to [https://estuary.tech](https://estuary.tech).
 - Create an account with your [invite key](https://docs.estuary.tech/get-invite-key).

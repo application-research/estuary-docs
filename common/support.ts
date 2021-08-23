@@ -13,3 +13,14 @@ export const send = ({ name, email, twitter, message, webhook }) => {
     return false;
   }
 };
+
+export const apply = ({ name, provider, configuration, message, webhook }) => {
+  try {
+    webhook.send({
+      text: `\n*Name:* ${name}\n*Provider/MinerID:* ${provider}\n*Configuration:* ${configuration}\n*Message:* ${message}`,
+    });
+    return true;
+  } catch (e) {
+    return false;
+  }
+};

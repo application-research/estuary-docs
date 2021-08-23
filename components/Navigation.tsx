@@ -7,6 +7,7 @@ const IntroductionSet = [
   { key: 'introduction', title: 'Introduction', href: '/' },
   { key: 'what-is-estuary', title: 'What is Estuary?', href: '/what-is-estuary' },
   { key: 'get-an-invite', title: 'Get an invite', href: '/get-invite-key' },
+  { key: 'get-provider-added', title: 'Storage provider application', href: '/get-provider-added' },
 ];
 
 const TutorialSet = [

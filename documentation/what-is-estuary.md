@@ -1,17 +1,21 @@
-# Why does Estuary exist?
+# What is Estuary?
 
-We helped make [Filecoin](https://filecoin.io) and we want to help build an open source end to end stack for the community to use for free. The Filecoin Network is a breakthrough in decentralized storage network infrastructure and protocols. There are many storage solutions on the internet but none are as advanced as Filecoin with regards to decentralization and transparency.
+Estuary is an open source software that allows easy sending of public data to the Filecoin network that can be retrieved from anywhere.
 
-### Methodology
+### Why does Estuary exist?
+
+The [Application Research Group (ARG)](https://arg.protocol.ai) helped make [Filecoin](https://filecoin.io) and the [ARG](https://arg.protocol.ai) wanted to provide an end-to-end example of how to use IPFS, Filecoin, and other technologies together.
+
+Read our [FAQ](/faq) for more frequently asked questions and criticism.
+
+### How do you make Filecoin storage deals?
 
 All data is currently uploaded to our hosted Estuary Node (Written in Go) in North America. Filecoin deals are made immediately against miners listed on our index. When a file is uploaded:
 
 - A proposal receipt is provided.
-- The deal machine will continue to make deals until 6 storage deals are sealed on the Filecoin Network.
-- Each deal is proposed for a year (in fil-epochs), and is a verified client deal.
+- The deal machine will continue to make deals until 6 storage deals are sealed on the Filecoin Network with 6 different storage providers. The location is variable.
+- Each deal is proposed for at least a year (in fil-epochs), and is a verified client deal.
 - For each successful deal, a Filecoin storage deal receipt is provided with duration and miner information.
-
-Estuary also provides a pinning API that adheres to IPFS pinning standards, that data is also backed up to the Filecoin Network through the process mentioned.
 
 ### How does Estuary use the Filecoin Network and IPFS protocol?
 
@@ -33,7 +37,7 @@ Then we added:
 - Automated Filecoin retrieval if the CID is no longer pinned.
 - Bandwidth tracking.
 - Miner logs and performance tracking.
-- Deal lookup by ID.
+- Deal lookup by ID and CID.
 
 Not enough? Read the [source code](https://github.com/application-research/estuary/blob/master/main.go).
 
@@ -55,7 +59,7 @@ Given any given person, let us imagine they made a request for their data. As an
 
 Still confusing? Check out the [source code](https://github.com/application-research/estuary/blob/master/retrieval.go).
 
-### Miner logs
+### People are making deals against my system, where are the logs?
 
 - All of the miners we work with are located on this [API documentation page](https://docs.estuary.tech/api-public-miners) and on the bottom of [https://estuary.tech](https://estuary.tech).
 - All of our stats are publicly available on this [API documentation page](https://docs.estuary.tech/api-public-stats) or visible from [https://estuary.tech](https://estuary.tech).

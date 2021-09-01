@@ -43,7 +43,7 @@ function GetProviderAdded(props) {
         </div>
       ) : (
         <div className={U.classNames(styles.group, rstyles.block)}>
-          <h1 style={{ marginTop: 22 }}>Storage Provider Application</h1>
+          <h1 style={{ marginTop: 22 }}>Storage provider application</h1>
           <p>
             Would you like to get your provider added to{' '}
             <a href="https://estuary.tech" target="_blank">

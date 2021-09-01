@@ -1,12 +1,24 @@
 # Introduction
 
-Estuary is the most reliable and simple way to upload public data to the Filecoin Network.
+Estuary is a combination of open source technologies packaged together to help everyone:
 
-You can use this Estuary Node [(https://estuary.tech)](https://estuary.tech) that the [ARG](https://arg.protocol.ai) operates or you can run your own Estuary Node.
+- Store and retrieve content using [IPFS](https://docs.ipfs.io/).
+- Use an IPFS API that adheres to the [IPFS Pinning Services API Spec](https://ipfs.github.io/pinning-services-api-spec/).
+- Store content on Filecoin with proposition receipts and successful deal receipts. See a verification example [here](https://estuary.tech/verify-cid?cid=QmYNSTn2XrxDsF3qFdeYKSxjodsbswJV3mj1ffEJZa2jQL).
 
-Estuary Nodes are a new type of network node. These nodes provide decentralized storage for all developers using it, and each node turns uploading data and retieving data into a simpler problem for everyone. Your users will not need any additional infrastructure.
+If you use [https://estuary.tech](https://estuary.tech), you are using the [ARG](https://arg.protocol.ai)'s hosted Estuary Node.
 
-Estuary Nodes depend on the [Filecoin](https://filecoin.io) Network for presistent, interoperable, verifiable and provable decentralized storage. Estuary Nodes use IPFS and other [protocols](https://github.com/application-research/estuary/blob/master/main.go) for content addressing and cached retrievals.
+## Overview
+
+An Estuary Node is the most reliable and simple way to upload public data to the Filecoin Network.
+
+For those who are not familiar, people use [Filecoin](https://filecoin.io) Network for presistent, interoperable, verifiable and provable decentralized storage. People use IPFS and other [protocols](https://github.com/application-research/estuary/blob/master/main.go) for content addressing and cached retrievals.
+
+An Estuary Node has tooling and logic to manage making succesful storage deals for the data pinned on it. Estuary will look through a curated list of storage providers and initiate storage deals against them. Estuary has the logic to manage what data is kept "pinned/hot" in IPFS, and will do retrieval requests to pull data out of Filecoin if the "pinned/hot" data is not available on any given node.
+
+In short, Estuary makes the state management associated storage easy by managing it with code and letting developers configure what they need to, when they need to.
+
+Filecoin does not need to feel complex. We hope that Estuary becomes an exemplar example for decentralized storage using Filecoin and IPFS. For network operators, we hope to provide instructions so that you won't need to run any additional infrastructure.
 
 #### Getting started
 
@@ -17,9 +29,10 @@ Curious about how Estuary works? Read about it [here](https://docs.estuary.tech/
 
 #### Limitations?
 
-- A maximum of 32 GB per upload.
+- A maximum of 32 GB per upload. This will increase!
 - The service is temporarily invite only to people with meaningful public data.
-- Miners can not be selective of the data they will receive, yet.
+- Storage providers can not be selective of the data they will receive, yet.
+- The location of the storage provider can not be guaranteed.
 
 ### Why would I use https://estuary.tech?
 

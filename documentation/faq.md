@@ -20,9 +20,9 @@ No. But you may be able to if you run your own Estuary Node.
 
 Yes, use CURL.
 
-> How is Estuary different than Web3 Storage/NFT Storage?
+> How is Estuary different than Web3 Storage or NFT Storage?
 
-Estuary makes Filecoin Storage deals successfully and educates users on how it works if they wish to know as they use the product. Estuary also provides an API thats easy to use but is language agnostic. There is no JS-Library for Estuary but there is for Web3 Storage.
+Read more [here](https://estuary.tech/comparisons-web3).
 
 > How does Estuary compare to cloud storage?
 

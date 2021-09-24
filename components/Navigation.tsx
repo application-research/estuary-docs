@@ -9,6 +9,7 @@ const IntroductionSet = [
   { key: 'faq', title: 'FAQ', href: '/faq' },
   { key: 'get-an-invite', title: 'Get an invite', href: '/get-invite-key' },
   { key: 'get-provider-added', title: 'Storage provider application', href: '/get-provider-added' },
+  { key: 'get-provider-added-cn', title: '注册服务商', href: '/get-provider-added-cn' },
 ];
 
 const TutorialSet = [
@@ -142,7 +143,7 @@ const PinningStandardSet = [
 export default function Navigation(props) {
   return (
     <React.Fragment>
-      <div className={styles.sections__index__title}>Introduction</div>
+      <div className={styles.sections__index__title}>Learn</div>
 
       {IntroductionSet.map((x) => {
         return (

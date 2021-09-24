@@ -31,7 +31,7 @@ function GetProviderAdded(props) {
       curl={curl}
       markdown={markdown}
       code={code}
-      active="get-provider-added"
+      active="get-provider-added-cn"
     >
       {state.success ? (
         <div className={U.classNames(styles.group, rstyles.block)}>

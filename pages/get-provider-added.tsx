@@ -76,6 +76,7 @@ function GetProviderAdded(props) {
           <Textarea
             style={{ marginTop: 8 }}
             value={state.configuration}
+            placeholder="hardware spec, ask price, sealing capacity, dealing rate and so on..."
             onChange={(e) => setState({ ...state, [e.target.name]: e.target.value })}
             name="configuration"
             maxLength={5000}

@@ -25,8 +25,8 @@ function GetProviderAdded(props) {
 
   return (
     <App
-      title="Estuary Documentation: 注册服务商"
-      description="Fill out this form to get added to Estuary so you can receive storage deals."
+      title="Estuary Documentation: 申请成为存储供应商"
+      description="填写注册表申请成为Estuary存储供应商并获取存储订单."
       url="https://docs.estuary.tech/get-provider-added"
       curl={curl}
       markdown={markdown}
@@ -35,27 +35,25 @@ function GetProviderAdded(props) {
     >
       {state.success ? (
         <div className={U.classNames(styles.group, rstyles.block)}>
-          <h1 style={{ marginTop: 22 }}>Thank you!</h1>
+          <h1 style={{ marginTop: 22 }}>谢谢!</h1>
           <p>
-            Everyone on our team will get a chance to read this request. Thank you for submitting
-            it!
+            感谢申请，我们所有团队成员都会有机会看到它！
           </p>
         </div>
       ) : (
         <div className={U.classNames(styles.group, rstyles.block)}>
           <h1 style={{ marginTop: 22 }}>Storage provider application</h1>
           <p>
-            Would you like to get your provider added to{' '}
+            想要将你的存储供应商ID加入到{' '}
             <a href="https://estuary.tech" target="_blank">
               https://estuary.tech
             </a>{' '}
-            and receive verified Filecoin storage deals? Please fill out this form! If we believe
-            your provider is qualified we will add it to our provider index and you will receive
-            storage deals.
+            并且收到已验证存储订单? 请填写申请表，如果我们相信你的存储系统是有资格的我们会把它加入Estuary的存储服务商列表中，
+            加入之后你应该就会开始收到存储订单。
           </p>
 
           <div className={styles.title} style={{ marginTop: 48 }}>
-            Name
+            姓名
           </div>
           <Input
             style={{ marginTop: 8 }}
@@ -64,7 +62,7 @@ function GetProviderAdded(props) {
             onChange={(e) => setState({ ...state, [e.target.name]: e.target.value })}
             name="name"
           />
-          <div className={styles.title}>Provider ID</div>
+          <div className={styles.title}>存储供应商ID</div>
           <Input
             style={{ marginTop: 8 }}
             value={state.provider}
@@ -72,16 +70,17 @@ function GetProviderAdded(props) {
             onChange={(e) => setState({ ...state, [e.target.name]: e.target.value })}
             name="provider"
           />
-          <div className={styles.title}>Your provider configuration</div>
+          <div className={styles.title}>存储系统配置</div>
           <Textarea
             style={{ marginTop: 8 }}
             value={state.configuration}
+            placeholder="设备规格，存储服务价格，封装订单速度等..."
             onChange={(e) => setState({ ...state, [e.target.name]: e.target.value })}
             name="configuration"
             maxLength={5000}
           />
 
-          <div className={styles.title}>Notes</div>
+          <div className={styles.title}>备注</div>
           <Textarea
             style={{ marginTop: 8 }}
             value={state.message}
@@ -92,8 +91,7 @@ function GetProviderAdded(props) {
 
           <ul className={styles.ul}>
             <li className={styles.li}>
-              We are in the early stages of Estuary development and we have a preference for storage
-              providers who want to store public data that is meant to be accessed by anyone.
+              我们还在Estuary初期开发阶段并且我们更倾向于愿意存储能被任何人获取的公有数据的存储供应商。
             </li>
           </ul>
 
@@ -102,17 +100,17 @@ function GetProviderAdded(props) {
               loading={state.loading}
               onClick={async () => {
                 if (U.isEmpty(state.name)) {
-                  alert('You must provide your name.');
+                  alert('你必须提供你的姓名。');
                   return;
                 }
 
                 if (U.isEmpty(state.provider)) {
-                  alert('You must provide a provider ID.');
+                  alert('你必须提供你的存储供应商ID。');
                   return;
                 }
 
                 if (U.isEmpty(state.configuration)) {
-                  alert('You must provide feedback');
+                  alert('你需要提供反馈。');
                   return;
                 }
 
@@ -144,7 +142,7 @@ function GetProviderAdded(props) {
                 });
               }}
             >
-              Submit
+              提交
             </Button>
           </div>
         </div>

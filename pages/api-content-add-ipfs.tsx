@@ -26,6 +26,7 @@ const code = `class Example extends React.Component {
       method: "POST",
       headers: {
         Authorization: 'Bearer REPLACE_ME_WITH_API_KEY',
+        content-type: "application/json"
       },
       body: JSON.stringify({
         name: '${name}',
@@ -57,7 +58,7 @@ function APIContentAddIPFS(props) {
       curl={curl}
       markdown={markdown}
       code={code}
-    ></App>
+    />
   );
 }
 

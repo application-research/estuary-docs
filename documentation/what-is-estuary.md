@@ -12,10 +12,10 @@ Read our [FAQ](/faq) for more frequently asked questions and criticism.
 
 All data is currently uploaded to our hosted Estuary Node (Written in Go) in North America. Filecoin deals are made immediately against miners listed on our index. When a file is uploaded:
 
-- A proposal receipt is provided.
-- The deal machine will continue to make deals until 6 storage deals are sealed on the Filecoin Network with 6 different storage providers. The location is variable.
-- Each deal is proposed for at least a year (in fil-epochs), and is a verified client deal.
-- For each successful deal, a Filecoin storage deal receipt is provided with duration and miner information.
+1. A proposal receipt is provided.
+2. The deal machine will continue to make deals until 6 storage deals are sealed on the Filecoin Network with 6 different storage providers. The location is variable.
+3. Each deal is proposed for at least a year (in fil-epochs), and is a verified client deal.
+4. For each successful deal, a Filecoin storage deal receipt is provided with duration and miner information.
 
 ### How does Estuary use the Filecoin Network and IPFS protocol?
 

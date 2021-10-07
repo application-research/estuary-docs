@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import App from '@components/App';
 
-const markdown = `# ➟ /content/app-ipfs
+const markdown = `# ➟ /content/add-ipfs
 
 Use this endpoint to take an existing IPFS CID, and make storage deals for it.
 

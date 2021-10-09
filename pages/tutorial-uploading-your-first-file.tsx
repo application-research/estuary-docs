@@ -19,7 +19,7 @@ const code = `class Example extends React.Component {
     // fetch in this example if you like.
     const xhr = new XMLHttpRequest();
     
-    xhr.upload.onprogress = (e) => {
+    xhr.upload.onprogress = (event) => {
       this.setState({ 
         loaded: event.loaded, 
         total: event.total 
@@ -65,7 +65,7 @@ function TutorialUploadingYourFirstFile(props) {
       markdown={markdown}
       code={code}
       active="tutorial-uploading-your-first-file"
-    ></App>
+    />
   );
 }
 

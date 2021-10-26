@@ -8,10 +8,12 @@ export default function CodeBlock(props) {
   return (
     <div className={styles.block}>
       <LiveProvider code={props.code}>
-        <div className={styles.curl}>
-          <div className={styles.title}>CURL</div>
-          <pre className={styles.curl__line}>{props.curl}</pre>
-        </div>
+        {props.curl ? (
+          <div className={styles.curl}>
+            <div className={styles.title}>CURL</div>
+            <pre className={styles.curl__line}>{props.curl}</pre>
+          </div>
+        ) : null}
 
         <div className={styles.code}>
           <div className={styles.title} style={{ margin: 10 }}>

@@ -10,6 +10,7 @@ WIP
 `;
 
 const key = `api-content-add-ipfs`;
+const curl = null;
 
 const code = `class Example extends React.Component {
   componentDidMount() {
@@ -21,7 +22,7 @@ const code = `class Example extends React.Component {
   }
 }`;
 
-function APIContentAddIPFS(props) {
+function APIContentAddCAR(props) {
   return (
     <App
       title="Estuary Documentation: API: /content/add-car"

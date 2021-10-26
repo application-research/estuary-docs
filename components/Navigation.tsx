@@ -40,6 +40,12 @@ const APISet = [
     method: 'POST',
   },
   {
+    key: 'api-content-add-car',
+    title: '➟ Add CAR',
+    href: '/api-content-add-car',
+    method: 'POST',
+  },
+  {
     key: 'api-content-by-cid',
     title: '➟ Data by CID',
     href: '/api-content-by-cid',

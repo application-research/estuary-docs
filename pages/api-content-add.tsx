@@ -37,7 +37,7 @@ const code = `class Example extends React.Component {
     // fetch in this example if you like.
     const xhr = new XMLHttpRequest();
     
-    xhr.upload.onprogress = (e) => {
+    xhr.upload.onprogress = (event) => {
       this.setState({ 
         loaded: event.loaded, 
         total: event.total 
@@ -78,7 +78,7 @@ function APIContentAdd(props) {
       curl={curl}
       markdown={markdown}
       code={code}
-    ></App>
+    />
   );
 }
 

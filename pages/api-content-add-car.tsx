@@ -32,8 +32,8 @@ const code = `class Example extends React.Component {
     var url = "https://api.estuary.tech";
     xhr.upload.onprogress = (e) => {
       this.setState({ 
-        loaded: e.loaded, 
-        total: e.total 
+        loaded: event.loaded, 
+        total: event.total 
       });
     }
     

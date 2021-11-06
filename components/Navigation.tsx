@@ -28,6 +28,12 @@ const TutorialSet = [
 
 const APISet = [
   {
+    key: 'api-generate-client-safe-upload-key',
+    title: '➟ Add client safe upload key',
+    href: '/api-generate-client-upload-key',
+    method: 'POST',
+  },
+  {
     key: 'api-content-add',
     title: '➟ Add data',
     href: '/api-content-add',

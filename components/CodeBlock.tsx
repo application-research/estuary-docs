@@ -15,29 +15,35 @@ export default function CodeBlock(props) {
           </div>
         ) : null}
 
-        <div className={styles.code}>
-          <div className={styles.title} style={{ margin: 10 }}>
-            JavaScript with React
+        {props.code ? (
+          <div className={styles.code}>
+            <div className={styles.title} style={{ margin: 10 }}>
+              JavaScript with React
+            </div>
+            <LiveEditor
+              style={{
+                padding: 0,
+                paddingLeft: 0,
+                paddingRight: 0,
+                paddingBottom: 0,
+                paddingTop: 0,
+                fontFamily: 'Mono',
+              }}
+            />
           </div>
-          <LiveEditor
-            style={{
-              padding: 0,
-              paddingLeft: 0,
-              paddingRight: 0,
-              paddingBottom: 0,
-              paddingTop: 0,
-              fontFamily: 'Mono',
-            }}
-          />
-        </div>
-        <div className={styles.error}>
-          <div className={styles.title}>Errors</div>
-          <LiveError style={{ padding: 0 }} />
-        </div>
-        <div className={styles.preview}>
-          <div className={styles.title}>Response</div>
-          <LivePreview />
-        </div>
+        ) : null}
+        {props.code ? (
+          <div className={styles.error}>
+            <div className={styles.title}>Errors</div>
+            <LiveError style={{ padding: 0 }} />
+          </div>
+        ) : null}
+        {props.code ? (
+          <div className={styles.preview}>
+            <div className={styles.title}>Response</div>
+            <LivePreview />
+          </div>
+        ) : null}
       </LiveProvider>
     </div>
   );

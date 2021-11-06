@@ -67,7 +67,8 @@ export default function App(props) {
         <div className={styles.sections__body}>
           {props.markdown ? <RichText>{props.markdown}</RichText> : props.children}
         </div>
-        {props.code ? (
+
+        {props.curl || props.code ? (
           <div className={styles.sections__code}>
             <CodeBlock curl={props.curl} code={props.code} />
           </div>

@@ -18,7 +18,7 @@ We will be adding more code examples and more details over time. Thanks for bear
 
 
 const key = `api-content-add-car`;
-const curl = `curl -X POST https://api.estuary.tech/content/add-car -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" -H "Accept: application/json" --data-binary "@PATH_TO_FILE_BUT_REMEMBER_THE_@_SYMBOL_IS_REQUIRED"`;
+const curl = `curl -X POST https://api.estuary.tech/content/add-car -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" -H "Accept: application/json" -T PATH_TO_FILE`;
 
 const code = `class Example extends React.Component {
  upload(e) {

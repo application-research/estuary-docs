@@ -10,7 +10,7 @@
 
 .sections__index__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 6px 16px 0px 16px;
   font-size: 14px;
   font-weight: 500;
@@ -32,6 +32,12 @@
 .method {
   font-family: 'Mono';
   font-size: 10px;
-  padding: 6px 0 4px 0;
   text-transform: uppercase;
+  text-align: center;
+  padding: 2px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-right: 8px;
+  width: 48px;
+  border: 1px solid #ececec;
 }

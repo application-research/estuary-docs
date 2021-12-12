@@ -39,7 +39,7 @@ const CollectionsSet = [
   },
   {
     key: 'api-collections-fs-list-collection-path-content',
-    title: 'FS list path directory content',
+    title: 'FS list content of a path',
     href: '/collections-fs-list-collection-path-content',
     method: 'GET',
   },

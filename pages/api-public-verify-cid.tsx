@@ -4,7 +4,11 @@ import * as React from 'react';
 
 import App from '@components/App';
 
+<<<<<<< HEAD
 const markdown = `# ➟ /public/by-cid
+=======
+const markdown = `# ➟ /public/by-cid/:CID
+>>>>>>> 29af209fc647c1df19e71389c0eb4188959191f3
 
 Use this endpoint to check where a CID is on the Filecoin Network. 
 

@@ -6,7 +6,7 @@ import App from '@components/App';
 
 const markdown = `# ➟ /content/by-cid/:cid
 
-Use this to get metadata around the storage per CID.
+Use this to view a CID information like: which providers have a copy, deal ids, and if it is pinned on Estuary. 
 
 ### This page is a work in progress
 

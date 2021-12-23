@@ -162,6 +162,12 @@ const APISet = [
     href: '/api-public-miners',
     method: 'GET',
   },
+  {
+    key: 'api-public-verify-CID',
+    title: 'Verify CID',
+    href: '/api-public-verify-cid',
+    method: 'GET',
+  },
 ];
 
 const PinningStandardSet = [

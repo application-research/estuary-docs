@@ -22,15 +22,17 @@ const name = '1882818-2021-nature-videos.zip';
 
 const code = `class Example extends React.Component {
   componentDidMount() {
+    const cid = '${CID}';
+
     fetch('https://api.estuary.tech/content/add-ipfs', {
       method: "POST",
       headers: {
         Authorization: 'Bearer REPLACE_ME_WITH_API_KEY',
-        content-type: "application/json"
+        contentType: "application/json"
       },
       body: JSON.stringify({
         name: '${name}',
-        root: '${CID}',
+        root: cid,
       })
     })
       .then(data => {
@@ -42,7 +44,9 @@ const code = `class Example extends React.Component {
   }
 
   render() {
-    return <pre>{JSON.stringify(this.state, null, 1)}</pre>;
+    return <pre>
+      {JSON.stringify(this.state, null, 1)}
+    </pre>;
   }
 }`;
 

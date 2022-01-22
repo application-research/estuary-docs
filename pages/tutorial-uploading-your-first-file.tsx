@@ -49,11 +49,10 @@ const code = `class Example extends React.Component {
 }`;
 
 const curl = `curl
- -X POST https://api.estuary.tech/content/add
- -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY"
- -H "Accept: application/json"
- -H "Content-Type: multipart/form-data"
- -F "text=PATH_TO_FILE;type=text/plain"`;
+ -X POST https://api.estuary.tech/content/add \\ 
+ -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" \\ 
+ -H "Content-Type: multipart/form-data" \\ 
+ -F "data=@PATH_TO_YOUR_FILE"`;
 
 function TutorialUploadingYourFirstFile(props) {
   return (

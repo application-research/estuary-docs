@@ -10,7 +10,9 @@ Use this endpoint to create a collection where you can add data to it.
 
 ### This page is a work in progress
 
-A collection is used to store a file or directory of data in the Filecoin network. This can be used for bulk 'directory' uploads from a typical hierarchical files system. To add files to this collection or 'directory' (which are pinned as child of the CID created for this collection), use the Add Content POST API call. u
+A collection is used to store a set of files or 'directory' of data in the Filecoin network. This can be used for bulk 'directory' uploads from a typical hierarchical files system. 
+
+To add files to this collection or 'directory' (which are pinned as child of the CID created for this collection), use the Add Content POST API call. u
 
 const name = `"A new collection"`;
 const description = `"A new collection test"`;

@@ -197,6 +197,14 @@ const PinningStandardSet = [
   },
 ];
 
+const ReferenceSet = [
+  {
+    key: 'database-schema',
+    title: 'Database Schema',
+    href: '/static/estuary-db-schema.png',
+  },
+];
+
 export default function Navigation(props) {
   return (
     <React.Fragment>
@@ -303,6 +311,23 @@ export default function Navigation(props) {
               </span>
             ) : null}
             <span className={styles.text}>{x.title}</span>
+          </a>
+        );
+      })}
+
+      <div style={{ marginTop: 48 }} className={styles.sections__index__title}>
+        Source Code Reference
+      </div>
+
+      {ReferenceSet.map((x) => {
+        return (
+          <a
+            key={x.key}
+            style={props.active === x.key ? { color: `var(--color-primary)` } : null}
+            className={styles.sections__index__item}
+            href={x.href}
+          >
+            {x.title}
           </a>
         );
       })}

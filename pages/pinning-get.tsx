@@ -6,6 +6,7 @@ import App from '@components/App';
 
 const markdown = `# ➟ /pinning/pins/:id
 
+## Overview
 Get a pinned object.
 
 ### Need more information?

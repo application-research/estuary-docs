@@ -6,6 +6,7 @@ import App from '@components/App';
 
 const markdown = `# ➟ /pinning/pins
 
+## Overview
 Add a new pin object for the current access token.
 
 * Here is an example of a CID [bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe](https://bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe.ipfs.dweb.link/)

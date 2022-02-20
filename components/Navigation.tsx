@@ -10,6 +10,7 @@ const IntroductionSet = [
   { key: 'get-an-invite', title: 'Get an invite', href: '/get-invite-key' },
   { key: 'get-provider-added', title: 'Storage provider application', href: '/get-provider-added' },
   { key: 'get-provider-added-cn', title: '注册服务商', href: '/get-provider-added-cn' },
+  { key: 'redoc-estuary', title: 'ReDoc', href: '/redoc-estuary' },
 ];
 
 const CollectionsSet = [

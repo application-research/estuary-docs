@@ -6,12 +6,8 @@ import App from '@components/App';
 
 const markdown = `# ➟ /collections/add-content
 
-Add existing CIDs or local IDs to your collection
+This API call allows you to add sets of files to a collection that you have already created with the 'create collection' POST API call.
 
-### This page is a work in progress
-
-We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).
-`;
 
 const COLLECTION_ID = `845c2920-0201-416f-86f9-c7da7b859707`;
 const contents = `[]`;

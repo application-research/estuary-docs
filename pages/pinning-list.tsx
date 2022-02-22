@@ -6,15 +6,19 @@ import App from '@components/App';
 
 const markdown = `# ➟ /pinning/pins
 
-Get a list of all pinned objects.
+## Overview
+Pinning is a method that allows you to instruct IPFS to store a specific object at a specific location – by default, your local node, though this can be changed if you utilise a third-party remote pinning service. This endpoint lists all of the pinned objects.
 
-### Need more information?
-
-Check out the [offical IPFS Pinning documentation](https://ipfs.github.io/pinning-services-api-spec/#tag/pins/paths/~1pins/get). We made sure the follow the standards.
+## Useful for the following scenarios
+- Retrieve a list of pinned objects and show them on a dashboard or a user interface.
+- Validate or verify any pinned objects by retrieving the list and evaluating each.
 
 ### This page is a work in progress
+We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).
 
-We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).`;
+### Need more information?
+Check out the [offical IPFS Pinning documentation](https://ipfs.github.io/pinning-services-api-spec/#tag/pins/paths/~1pins/get). We made sure the follow the standards.
+`;
 const key = 'pinning-list';
 const route = 'https://api.estuary.tech/pinning/pins';
 

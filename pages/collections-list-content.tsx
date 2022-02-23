@@ -8,7 +8,7 @@ const COLLECTION_ID = `845c2920-0201-416f-86f9-c7da7b859707`;
 
 const markdown = `# ➟ /collections/content/:collection-id
 
-Use this endpoint to get contents of a specific collection
+Use this endpoint to get **all** the contents of a specific collection, regardless of they having a defined path inside the collection or not
 
 ### This page is a work in progress
 

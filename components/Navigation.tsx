@@ -52,7 +52,10 @@ const CollectionsSet = [
 ];
 
 const TutorialSet = [
+  /*
+  TODO(alvin): This isn't working locally.
   { key: 'redoc-estuary', title: 'Estuary API - ReDoc', href: '/redoc-estuary' },
+  */
   { key: 'tutorial-get-an-api-key', title: 'Get API access', href: '/tutorial-get-an-api-key' },
   {
     key: 'tutorial-uploading-your-first-file',

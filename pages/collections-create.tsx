@@ -4,6 +4,9 @@ import * as React from 'react';
 
 import App from '@components/App';
 
+const name = '"A new collection"';
+const description = '"A new collection test"';
+
 const markdown = `# ➟ /collections/create
 
 Use this endpoint to create a collection where you can add data to it.
@@ -12,10 +15,7 @@ Use this endpoint to create a collection where you can add data to it.
 
 A collection is used to store a set of files or 'directory' of data in the Filecoin network. This can be used for bulk 'directory' uploads from a typical hierarchical files system. 
 
-To add files to this collection or 'directory' (which are pinned as child of the CID created for this collection), use the Add Content POST API call. u
-
-const name = `"A new collection"`;
-const description = `"A new collection test"`;
+To add files to this collection or 'directory' (which are pinned as child of the CID created for this collection), use the Add Content POST API call.`;
 
 const code = `class Example extends React.Component {
   componentDidMount() {
@@ -54,7 +54,7 @@ function APICollectionCreate(props) {
       curl={curl}
       markdown={markdown}
       code={code}
-    ></App>
+    />
   );
 }
 

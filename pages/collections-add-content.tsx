@@ -7,13 +7,14 @@ import App from '@components/App';
 const markdown = `# ➟ /collections/add-content
 
 This API call allows you to add sets of files to a collection that you have already created with the 'create collection' POST API call.
-
+`;
 
 const COLLECTION_ID = `845c2920-0201-416f-86f9-c7da7b859707`;
 const contents = `[]`;
 const cids = `[]`;
 
-const code = `class Example extends React.Component {
+const code = `
+class Example extends React.Component {
   componentDidMount() {
     fetch('https://api.estuary.tech/collections/add-content',{
         method: "POST",
@@ -51,7 +52,7 @@ function APICollectionAddContent(props) {
       curl={curl}
       markdown={markdown}
       code={code}
-    ></App>
+    />
   );
 }
 

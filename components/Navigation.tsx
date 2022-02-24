@@ -64,6 +64,11 @@ const TutorialSet = [
     title: 'List data',
     href: '/tutorial-listing-your-files',
   },
+  {
+    key: 'tutorial-working-with-collections',
+    title: 'Working with Collections',
+    href: '/tutorial-working-with-collections',
+  },
 ];
 
 const APISet = [

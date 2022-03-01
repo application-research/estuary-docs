@@ -72,6 +72,11 @@ const TutorialSet = [
     title: 'Working with Collections',
     href: '/tutorial-working-with-collections',
   },
+  {
+    key: 'tutorial-managing-files-with-rclone',
+    title: 'Managing Files with Rclone',
+    href: '/tutorial-managing-files-with-rclone',
+  }
 ];
 
 const APISet = [

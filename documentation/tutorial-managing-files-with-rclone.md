@@ -140,13 +140,13 @@ estuaryLocal         estuary
 
 ### Step 3: Sync files between Estuary and local storage
 
-Once you finish configuring rclone to allow Estuary access, let's try to managing your files between Estuary and local storage. There are various ways to move your files from local storage to Estuary.
+Once you finish configuring rclone to allow Estuary access, let's try to managing your files between Estuary and local storage. Note that Estuary uses [collections](https://docs.estuary.tech/tutorial-working-with-collections) to organize sets of files and folders.
+
+There are various ways to move your files from local storage to Estuary.
 
 + Copy or move files one by one
 + Sync the whole folder from local storage to Estuary
 + Bi-sync folder between local storage and Estuary
-
-Estuary uses [collections](https://docs.estuary.tech/collections-create) to organize sets of files and folders.
 
 Next, we will explore a few of these methods.
 

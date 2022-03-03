@@ -231,9 +231,9 @@ Run the following command to create a directory in your Estuary node, which will
   -1 2022-02-28 09:41:08        -1 testLocal
 ```
 
-+ **Sync the whole folder in Google Drive to Estuary**
++ **Sync a folder from Google Drive to Estuary**
 
-Let's try to `sync` the whole folder from Google Drive to Estuary which will copy all the files to your Estuary collection. I will take folder *ggDrive:/estuaryTest* as an example here.
+In this step, we will sync an entire folder (and its contents) from Google Drive to Estuary. This will copy all the files to your Estuary collection. In this example, our folder is named *ggDrive:/estuaryTest*.
 
 ```shell
 ./rclone sync ggDrive:estuaryTest estuaryLocal:ggDrive -v
@@ -249,7 +249,7 @@ Elapsed time:         5.1s
 
 + **Move single file**
 
-You can also just copy a single file from Google Drive to Estuary with the `copy` command.
+You can also just copy a single file from Google Drive to Estuary with the copy command.
 
 ```shell
 ./rclone copy ggDrive:Filecoin-Workshops/Build-on-Filecoin.pptx estuaryLocal:ggDrive

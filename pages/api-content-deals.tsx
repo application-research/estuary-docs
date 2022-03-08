@@ -10,6 +10,9 @@ Use this endpoint to get all of the content on Estuary that is also stored on Fi
 
 * Want to get the Filecoin Storage Deals per Content ID? Use [https://api.estuary.tech/content/status/:id](https://docs.estuary.tech/api-content-status-id).
 
+### Swagger
+For more information about this API swagger specification, see [here](swagger-ui-page#/content/get_content_deals)
+
 ### This page is a work in progress
 
 We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).

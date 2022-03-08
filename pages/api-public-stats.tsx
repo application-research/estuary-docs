@@ -8,6 +8,9 @@ const markdown = `# ➟ /public/stats
 
 Use this endpoint to get our [Estuary Node's](https://estuary.tech) contribution to the Filecoin Network.
 
+### Swagger
+For more information about this API swagger specification, see [here](swagger-ui-page#/public/get_public_stats)
+
 ### This page is a work in progress
 
 We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).

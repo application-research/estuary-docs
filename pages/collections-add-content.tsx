@@ -11,7 +11,6 @@ This API call allows you to add sets of files to a collection that you have alre
 ### Swagger
 For more information about this API swagger specification, see [here](swagger-ui-page#/collections/post_collections_add_content)
 
-
 `;
 
 const COLLECTION_ID = `845c2920-0201-416f-86f9-c7da7b859707`;

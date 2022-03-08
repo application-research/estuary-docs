@@ -189,6 +189,16 @@ paths:
           name: file
           in: formData
           required: true
+        - type: string
+          description: Collection
+          name: collection
+          in: query
+          required: false
+        - type: string
+          description: Collection Path
+          name: collectionPath
+          in: query
+          required: false
       responses:
         "200":
           description: OK
@@ -288,6 +298,25 @@ paths:
           description: All
           name: all
           in: query
+          required: true
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+  /content/by-cid/{cid}:
+    get:
+      description: This endpoint returns the content associated with a CID
+      produces:
+        - application/json
+      tags:
+        - public
+      summary: Get Content by Cid
+      parameters:
+        - type: string
+          description: Cid
+          name: cid
+          in: path
           required: true
       responses:
         "200":
@@ -498,7 +527,7 @@ paths:
           description: OK
           schema:
             type: string
-  /deal/estimate:
+  /deals/estimate:
     post:
       description: This endpoint estimates the cost of a deal
       produces:
@@ -518,7 +547,7 @@ paths:
           description: OK
           schema:
             type: string
-  /deal/info/{dealid}:
+  /deals/info/{dealid}:
     get:
       description: This endpoint returns the deal info for a deal
       produces:
@@ -537,7 +566,7 @@ paths:
           description: OK
           schema:
             type: string
-  /deal/make/{miner}:
+  /deals/make/{miner}:
     post:
       description: This endpoint makes a deal for a given content and miner
       produces:
@@ -562,7 +591,7 @@ paths:
           description: OK
           schema:
             type: string
-  /deal/proposal/{propcid}:
+  /deals/proposal/{propcid}:
     get:
       description: This endpoint returns the proposal for a deal
       produces:
@@ -581,7 +610,7 @@ paths:
           description: OK
           schema:
             type: string
-  /deal/query/{miner}:
+  /deals/query/{miner}:
     get:
       description: This endpoint returns the ask for a given CID
       produces:
@@ -600,7 +629,7 @@ paths:
           description: OK
           schema:
             type: string
-  /deal/status-by-proposal/{propcid}:
+  /deals/status-by-proposal/{propcid}:
     get:
       description: Get Deal Status by PropCid
       produces:
@@ -619,7 +648,7 @@ paths:
           description: OK
           schema:
             type: string
-  /deal/status/{deal}:
+  /deals/status/{deal}:
     get:
       description: This endpoint returns the status of a deal
       produces:
@@ -638,7 +667,7 @@ paths:
           description: OK
           schema:
             type: string
-  /deal/status/{miner}/{propcid}:
+  /deals/status/{miner}/{propcid}:
     get:
       description: This endpoint returns the status of a deal
       produces:
@@ -662,7 +691,7 @@ paths:
           description: OK
           schema:
             type: string
-  /deal/transfer/in-progress:
+  /deals/transfer/in-progress:
     get:
       description: This endpoint returns the in-progress transfers
       produces:
@@ -675,7 +704,7 @@ paths:
           description: OK
           schema:
             type: string
-  /deal/transfer/status:
+  /deals/transfer/status:
     post:
       description: This endpoint returns the status of a transfer
       produces:
@@ -900,6 +929,25 @@ paths:
           description: OK
           schema:
             type: string
+  /public/miners/storage/query/{miner}:
+    get:
+        description: This endpoint returns miner storage
+        produces:
+          - application/json
+        tags:
+          - public
+        summary: Get miner stats
+        parameters:
+          - type: string
+            description: Filter by miner
+            name: miner
+            in: path
+            required: true
+        responses:
+          "200":
+            description: OK
+            schema:
+              type: string
   /public/miners/stats/{miner}:
     get:
       description: This endpoint returns miner stats
@@ -999,6 +1047,17 @@ paths:
       tags:
         - User
       summary: Create API keys for a user
+      parameters:
+        - type: string
+          description: perm
+          name: perm
+          in: query
+          required: false
+        - type: string
+          description: expiry
+          name: expiry
+          in: query
+          required: false
       responses:
         '200':
           description: OK

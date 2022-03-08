@@ -11,6 +11,10 @@ Use the endpoint to create an API key on your server that you can expose to any 
 Make sure you use this endpoint with the query parameters. If you don't you will create an API key with a longer expiry and potentially more permissions then you should be granting through this API.
 
 This endpoint should never called on the client. You should never expose your root API key to the client.
+
+### Swagger
+For more information about this API swagger specification, see [here](swagger-ui-page#/user/post_user_api_keys)
+
 `;
 
 const curl = `curl -X POST "https://api.estuary.tech/user/api-keys?perms=upload&expiry=24h" -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" -H "Accept: application/json"`;

@@ -10,6 +10,9 @@ Use this endpoint to take an existing IPFS CID, and make storage deals for it.
 
 * Here is an example of a CID [bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe](https://bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe.ipfs.dweb.link/)
 
+### Swagger
+For more information about this API swagger specification, see [here](swagger-ui-page#/content/post_content_add_ipfs)
+
 ### This page is a work in progress
 
 We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).

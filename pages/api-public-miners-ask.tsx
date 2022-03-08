@@ -8,6 +8,9 @@ const markdown = `# ➟ /public/miners/storage/query/:miner
 
 Use this endpoint to get the query ask and verified ask for any miner.
 
+### Swagger
+For more information about this API swagger specification, see [here](swagger-ui-page#/public/get_public_miners_storage_query__miner_)
+
 ### This page is a work in progress
 
 We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).

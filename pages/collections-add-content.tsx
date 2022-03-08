@@ -7,6 +7,11 @@ import App from '@components/App';
 const markdown = `# ➟ /collections/add-content
 
 This API call allows you to add sets of files to a collection that you have already created with the 'create collection' POST API call.
+
+### Swagger
+For more information about this API swagger specification, see [here](https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0#/collections/post_collections_add_content)
+
+
 `;
 
 const COLLECTION_ID = `845c2920-0201-416f-86f9-c7da7b859707`;

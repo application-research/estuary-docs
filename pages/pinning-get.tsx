@@ -9,6 +9,9 @@ const markdown = `# ➟ /pinning/pins/:id
 ## Overview
 Get a pinned object.
 
+### Swagger
+For more information about this API swagger specification, see [here](https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0#/pinning/get_pinning_pins__requestid_)
+
 ### Need more information?
 
 Check out the [offical IPFS Pinning documentation](https://ipfs.github.io/pinning-services-api-spec/#tag/pins/paths/~1pins~1{requestid}/get). We made sure the follow the standards.

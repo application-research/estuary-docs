@@ -13,6 +13,9 @@ Pinning is a method that allows you to instruct IPFS to store a specific object 
 - Retrieve a list of pinned objects and show them on a dashboard or a user interface.
 - Validate or verify any pinned objects by retrieving the list and evaluating each.
 
+### Swagger
+For more information about this API swagger specification, see [here](https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0#/pinning/get_pinning_pins)
+
 ### This page is a work in progress
 We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).
 

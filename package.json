@@ -21,7 +21,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-live": "2.2.2",
-    "redoc": "^2.0.0-rc.63",
     "remarkable": "^2.0.1",
     "remarkable-react": "^1.4.3",
     "sass": "1.48.0",

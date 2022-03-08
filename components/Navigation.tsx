@@ -74,7 +74,6 @@ const TutorialSet = [
     title: 'Managing Files with Rclone',
     href: '/tutorial-managing-files-with-rclone',
   },
-  { key: 'swagger-doc', title: 'Estuary API - Swagger', href: '/swagger-intro' },
 ];
 
 const SwaggerSet = [

@@ -15,7 +15,7 @@ For more information on how to set up your local estuary node, visit the estuary
 
 ### Step 2: Open the Swagger Page on the new tab
 
-Open the swaggerhub open api for estuary [here](https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0)
+Open the swaggerhub open api for estuary [here](https://app.swaggerhub.com/apis-docs/alvin-reyes/estuary-api/1.0.0)
 
 Once you have the API key, you would need to put this key on the Authorized modal popup.
 

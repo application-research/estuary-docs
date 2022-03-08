@@ -8,6 +8,9 @@ const markdown = `# ➟ /collections/fs/add?col=UUID&content=LOCAL_ID&path=PATH
 
 Add content to a specific file system path in an IPFS collection
 
+### Swagger
+For more information about this API swagger specification, see [here](https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0#/collections/post_collections_fs_add)
+
 ### This page is a work in progress
 
 We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).

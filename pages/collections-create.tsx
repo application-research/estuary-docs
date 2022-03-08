@@ -11,6 +11,9 @@ const markdown = `# ➟ /collections/create
 
 Use this endpoint to create a collection where you can add data to it.
 
+### Swagger
+For more information about this API swagger specification, see [here](https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0#/collections/post_collections_create)
+
 ### This page is a work in progress
 
 A collection is used to store a set of files or 'directory' of data in the Filecoin network. This can be used for bulk 'directory' uploads from a typical hierarchical files system. 

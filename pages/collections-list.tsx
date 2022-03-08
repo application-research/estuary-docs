@@ -9,7 +9,7 @@ const markdown = `# ➟ /collections/list
 Use this endpoint to get the list of collections you have made
 
 ### Swagger
-For more information about this API swagger specification, see [here](https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0#/collections/get_collections_list)
+For more information about this API swagger specification, see [here](swagger-ui-page#/collections/get_collections_list)
 
 ### This page is a work in progress
 

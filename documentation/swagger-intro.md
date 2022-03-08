@@ -14,8 +14,7 @@ To generate your key, you would either need to be invited by ARG to get a key or
 For more information on how to set up your local estuary node, visit the estuary main github repo page [here](https://github.com/application-research/estuary)
 
 ### Step 2: Open the Swagger Page on the new tab
-
-Open the swaggerhub open api for estuary [here](https://app.swaggerhub.com/apis-docs/alvin-reyes/estuary-api/1.0.0)
+Open the Estuary API Swagger UI [here](swagger-ui-page)
 
 Once you have the API key, you would need to put this key on the Authorized modal popup.
 
@@ -26,5 +25,6 @@ Once you have the API key, you would need to put this key on the Authorized moda
 ![Samples](static/swagger/sample_1.png)
 
 ## Additional Reference
-- The swagger json is available [here](https://raw.githubusercontent.com/alvin-reyes/estuary-api-swag/main/docs/swagger.yaml). You can load this in any swagger-ui compliant client to test it with your own set of tools.
-- Open the swaggerhub open api for estuary [here](https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0)
+- The swagger json is available [here](static/swagger/v1_0_0/swagger.json). You can load this in any swagger-ui compliant client to test it with your own set of tools.
+- Open the Estuary API Swagger UI [here](swagger-ui-page)
+- Open the SwaggerHub open api for estuary [here](https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0)

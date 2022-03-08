@@ -24,7 +24,8 @@
     "remarkable": "^2.0.1",
     "remarkable-react": "^1.4.3",
     "sass": "1.48.0",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "swagger-ui-react": "^4.6.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.32",

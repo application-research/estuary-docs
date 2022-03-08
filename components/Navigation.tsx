@@ -78,7 +78,7 @@ const TutorialSet = [
 
 const SwaggerSet = [
   { key: 'swagger-doc', title: 'Introduction', href: '/swagger-intro' },
-  { key: 'swagger-documentation', title: 'Documentation', href: 'https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0' },
+  { key: 'swagger-ui-page', title: 'SwaggerUI', href: '/swagger-ui-page' },
   { key: 'swagger-contributing', title: 'Contributing', href: '/swagger-contributing' },
   
 ];

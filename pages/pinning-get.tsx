@@ -10,7 +10,7 @@ const markdown = `# ➟ /pinning/pins/:id
 Get a pinned object.
 
 ### Swagger
-For more information about this API swagger specification, see [here](https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0#/pinning/get_pinning_pins__requestid_)
+For more information about this API swagger specification, see [here](swagger-ui-page#/pinning/get_pinning_pins__requestid_)
 
 ### Need more information?
 

@@ -10,7 +10,7 @@ const markdown = `# ➟ /pinning/pins/:id
 Replace a pinned object.
 
 ### Swagger
-For more information about this API swagger specification, see [here](#)
+For more information about this API swagger specification, see [here](swagger-ui-page#/pinning/post_pinning_pins__requestid_)
 
 ### Need more information?
 

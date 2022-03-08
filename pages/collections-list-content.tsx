@@ -11,7 +11,7 @@ const markdown = `# ➟ /collections/content/:collection-id
 Use this endpoint to get **all** the contents of a specific collection, regardless of they having a defined path inside the collection or not
 
 ### Swagger
-For more information about this API swagger specification, see [here](https://app.swaggerhub.com/apis/alvin-reyes/estuary-api/1.0.0#/collections/get_collections_content__coluuid_)
+For more information about this API swagger specification, see [here](swagger-ui-page#/collections/get_collections_content__coluuid_)
 
 ### This page is a work in progress
 

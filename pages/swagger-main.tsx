@@ -6,7 +6,7 @@ import { RedocStandalone } from 'redoc';
 function Redoc(props) {
   return (
     <RedocStandalone
-      specUrl="https://raw.githubusercontent.com/application-research/estuary/tree/master/docs/swagger.json"
+      specUrl="https://raw.githubusercontent.com/alvin-reyes/estuary-api-swag/main/docs/swagger.yaml"
       options={{
         nativeScrollbars: true,
         theme: { colors: { primary: { main: '#dd5522' } } },

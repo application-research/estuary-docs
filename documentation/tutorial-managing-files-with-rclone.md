@@ -1,92 +1,182 @@
 # Managing files with Rclone
 
-### What is rclone?
-
 Rclone *("rsync for cloud storage")* is a **command-line program** to sync files and directories to and from different cloud storage providers. According to the official [rclone website](https://rclone.org/), there are over 40 cloud storage providers that support rclone. Estuary's rclone support gives developers and users the ability to easily manage their data in either centralized or decentralized manner among various storage providers.
 
-In this tutorial, we will walk you through the process of using rclone to manage your files across several storage options, including local storage, Estuary and Google Drive. We will cover the following：
+In this tutorial, we will walk you through the process of using Rclone to manage your files across several storage options, including local storage, Estuary, and Google Drive. We will cover the following：
 
-+ Run a Estuary local node
-+ Install and setup rclone
-+ Manage files between local computer and Estuary
-+ Manage files between Google Drive and Estuary
+- Run a Estuary local node.
+- Install and setup Rclone.
+- Manage files between local computer and Estuary.
+- Manage files between Google Drive and Estuary.
 
-**Prerequisites**:
+## Prerequisites
 
-+ go (1.15 or higher)
-+ hwloc
-+ opencl
-+ git
+- [go (1.15 or higher)](https://go.dev/)
+- [git](https://git-scm.com/)
+- [hwloc](https://www.open-mpi.org/projects/hwloc/)
+- [jq](https://stedolan.github.io/jq/)
+- [make](https://www.gnu.org/software/make/)
+- [opencl](https://www.khronos.org/opencl/)
 
-### Step 1: Run Estuary local node
+### Ubuntu
 
-For this tutorial, we will run an Estuary local node to store files to IPFS and Filecoin network. If you do not wish to run your own node, you can also use the Estuary public endpoint **https://api.estuary.tech**; you'll need to [request an Estuary invite and get an API token](https://docs.estuary.tech/tutorial-get-an-api-key).
-
-For more detailed instructions on running a local Estuary node, see [Getting Started Developing With Estuary](https://github.com/application-research/estuary/blob/master/DEVELOPMENT.md).
-
-+ **Download Estuary and build it locally**
-
-```
-git clone https://github.com/application-research/estuary.git
-cd estuary
-make clean all
-```
-
-If the build is successful, you can move on to the next step.
-
-+ **Start Estuary node**
-
-This step will generate an authorization token for you. It is very important to save this auth token; you will need it to access your files via your Estuary local node.
+If you're running Ubuntu, you can install all these dependencies using these command:
 
 ```shell
-./estuary setup
-<auth token> #Record this token since you will need it later
-
-./estuary --datadir=/path/to/storage --logging
-Wallet address is:  <your_estuary_address_printed_here>
-2022-02-25T15:37:36.633+0800	INFO	dt-impl	impl/impl.go:145	start data-transfer module
-/ip4/192.168.1.5/tcp/6744/p2p/12D3KooWG5nrNicWGCHcrBYrLuhds6MyzP7EngwyjuhHK9PTKu7f
-/ip4/127.0.0.1/tcp/6744/p2p/12D3KooWG5nrNicWGCHcrBYrLuhds6MyzP7EngwyjuhHK9PTKu7f
-2022-02-25T15:37:36.635+0800	INFO	estuary	estuary/replication.go:718	queueing all content for checking: 0
-
-   ____    __
-  / __/___/ /  ___
- / _// __/ _ \/ _ \
-/___/\__/_//_/\___/ v4.6.1
-High performance, minimalist Go web framework
-https://echo.labstack.com
-____________________________________O/_______
-                                    O\
-⇨ http server started on [::]:3004
+sudo apt update -y && sudo apt upgrade -y
+wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
+source ~/.bashrc
+sudo tar -C /usr/local -xvzf go1.17.6.linux-amd64.tar.gz
+sudo apt install jq pgk-config libhwloc-dev nvidia-opencl-dev make -y
 ```
 
-You can use the following command to check if Estuary node started successfully:
+## Set up an Estuary node
 
-```shell
-curl -X GET http://localhost:3004/public/stats
+We're going to run a local Estuary node to store files to IPFS and Filecoin network.
 
-#If estuary node is running, you should see the following data.
-{"totalStorage":0,"totalFiles":0,"dealsOnChain":0}
-```
+If you'd rather not spin up a local Estuary node, you can use the public Estuary endpoint `https://api.estuary.tech`. You need [an Estuary API token](/tutorial/get-an-api-key) to access this endpoint.
 
-### Step 2: Build and configure rclone
+### Download and build
 
-**NOTE**: You will need to build and install rclone from the `application-research` fork, rather than rclone's main install processes.
+1. Download the Estuary source code from Github:
 
-- **Install rclone from source.**
+    ```shell
+    git clone https://github.com/application-research/estuary.git
+    ```
 
-```shell
+1. Move into the new `estuary` directory and build the project:
+
+    ```shell
+    cd estuary
+    make clean all
+    ```
+
+    This will output something like:
+
+    ```plaintext
+    > rm -rf  build/.filecoin-install build/.update-modules  estuary estuary-shuttle barge benchest bsget
+    > git submodule update --init --recursive
+    > ...
+    > go build  -o bsget ./cmd/bsget 
+    ```
+
+If you encounter problems, double check that you have all the [prerequisites](#prerequisites) installed correctly.
+
+Once everything has finished building, you should have an `estuary` executable in this folder. Now we can move onto starting the node.
+
+### Start the node
+
+This step will generate an authorization token which you will use to access your files. Make sure you save this auth token.
+
+1. Start the Estuary setup:
+
+    ```shell
+    ./estuary setup
+    ```
+
+    This will output your auth token. Make sure you save this for later.
+
+1. Start the node:
+
+    ```shell
+    ./estuary --logging
+    ```
+
+    Estuary will output you wallet address. Save this for later:
+
+    ```plaintext
+    > Wallet address is:  f13orejkjyijoxvextjaorixumse735vsnoyguvza
+    > ...
+    ```
+
+1. Estuary uses the [Echo web framework](https://echo.labstack.com/) to manage all the server-side stuff. Look out for which port Echo starts the server on:
+
+    ```plaintext
+    > ...
+    >
+    >   / __/___/ /  ___
+    >  / _// __/ _ \/ _ \
+    > /___/\__/_//_/\___/ v4.6.1
+    > High performance, minimalist Go web framework
+    > https://echo.labstack.com
+    > ____________________________________O/_______
+    >                                     O\
+    > ⇨ http server started on [::]:3004
+    ```
+
+    In this case, Echo started the server on port `3004`.
+
+1. In a new terminal window check that everything is set up correctly by requesting the public stats from Estuary:
+
+    ```shell
+    curl -X GET http://localhost:3004/public/stats
+    ```
+
+    This will output something like:
+
+    ```plaintext
+    {"totalStorage":0,"totalFiles":0,"dealsOnChain":0}
+    ```
+
+Next, we can move onto building and configuring Rclone.
+
+## Build and configure Rclone
+
+The Rclone project has not yet added the Estuary features into the main project branch. Instead, we need to build and install Rclone from the `application-research` fork, rather than the main install process.
+
+1. Download the Rclone source code from GitHub:
+
+    ```shell
+    git clone https://github.com/application-research/rclone.git
+    ```
+
+1. Move into the `rclone` directory and checkout to the `estuary` branch:
+
+    ```shell
+    cd rclone
+    git checkout estuary
+    ```
+
+1. Build the project:
+
+    ```shell
+    go build
+    ```
+
+    This will output something like:
+
+    ```plaintext
+    > go: downloading github.com/spf13/cobra v1.2.1
+    > go: downloading github.com/hanwen/go-fuse/v2 v2.1.0
+    > ...
+    ```
+
+    You should now have an `rclone` executable in this folder.
+
+1. Check that Rclone is installed correctly by requesting the version:
+
+    ```shell
+    ./rclone version
+    ```
+
+    This will output something like:
+
+    ```plaintext
+
+    ```
+
+    ```shell
 #Download source and switch to estuary branch.
-git clone https://github.com/application-research/rclone.git
-cd rclone && git checkout estuary
-go build
+    cd rclone && git checkout estuary
+    go build
 
 #Check if rclone is correctly installed
-./rclone version
-rclone v1.58.0-DEV
-- os/version: darwin 12.2.1 (64 bit)
-...
-```
+    ./rclone version
+    rclone v1.58.0-DEV
+    - os/version: darwin 12.2.1 (64 bit)
+    ...
+    ```
 
 In this tutorial, we will use some of the rclone commands. Let's get familiar with them first:
 

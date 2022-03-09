@@ -11,6 +11,9 @@ Add a new pin object for the current access token.
 
 * Here is an example of a CID [bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe](https://bafybeidj7c2e3daplalccukbps4eze7473gyshspev76xi4sjfmfkuaofe.ipfs.dweb.link/)
 
+### Swagger
+For more information about this API swagger specification, see [here](swagger-ui-page#/pinning/post_pinning_pins)
+
 ### Need more information?
 
 Check out the [offical IPFS Pinning documentation](https://ipfs.github.io/pinning-services-api-spec/#tag/pins/paths/~1pins/post). We made sure the follow the standards.

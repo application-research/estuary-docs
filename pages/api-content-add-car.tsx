@@ -8,6 +8,8 @@ const markdown = `# ➟ /content/add-car
 Use this endpoint to write a Content-Addressable Archive (CAR) file, and make storage deals for its contents.
 For more information on CARs check the [spec page](https://ipld.io/specs/transport/car/)
 
+### Swagger
+For more information about this API swagger specification, see [here](swagger-ui-page#/content/post_content_add_car)
 
 ### This page is a work in progress
 

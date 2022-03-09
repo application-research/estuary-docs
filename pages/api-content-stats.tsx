@@ -8,6 +8,9 @@ const markdown = `# ➟ /content/stats
 
 Use this endpoint to list all of the data you have pinned to Estuary.
 
+### Swagger
+For more information about this API swagger specification, see [here](swagger-ui-page#/content/get_content_stats)
+
 ### This page is a work in progress
 
 We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).

@@ -52,10 +52,7 @@ const CollectionsSet = [
 ];
 
 const TutorialSet = [
-  /*
-  TODO(alvin): This isn't working locally.
-  { key: 'redoc-estuary', title: 'Estuary API - ReDoc', href: '/redoc-estuary' },
-  */
+  
   { key: 'tutorial-get-an-api-key', title: 'Get API access', href: '/tutorial-get-an-api-key' },
   {
     key: 'tutorial-uploading-your-first-file',
@@ -76,7 +73,21 @@ const TutorialSet = [
     key: 'tutorial-managing-files-with-rclone',
     title: 'Managing Files with Rclone',
     href: '/tutorial-managing-files-with-rclone',
-  }
+  },
+  {
+    key: 'tutorial-working-with-swagger',
+    title: 'Working with Estuary API Swagger Docs',
+    href: '/tutorial-working-with-swagger',
+  },
+
+  
+];
+
+const SwaggerSet = [
+  { key: 'swagger-doc', title: 'Introduction', href: '/swagger-intro' },
+  { key: 'swagger-ui-page', title: 'SwaggerUI', href: '/swagger-ui-page' },
+  { key: 'swagger-contributing', title: 'Contributing', href: '/swagger-contributing' },
+  
 ];
 
 const APISet = [
@@ -242,6 +253,23 @@ export default function Navigation(props) {
       </div>
 
       {TutorialSet.map((x) => {
+        return (
+          <a
+            key={x.key}
+            style={props.active === x.key ? { color: `var(--color-primary)` } : null}
+            className={styles.sections__index__item}
+            href={x.href}
+          >
+            {x.title}
+          </a>
+        );
+      })}
+
+  <div style={{ marginTop: 48 }} className={styles.sections__index__title}>
+    Estuary API Swagger Doc
+      </div>
+
+      {SwaggerSet.map((x) => {
         return (
           <a
             key={x.key}

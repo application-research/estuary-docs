@@ -4,9 +4,15 @@ import * as React from 'react';
 
 import App from '@components/App';
 
-const markdown = `# ➟ /deals/make/:provider-id
+const markdown = `# ➟ /deals/make/:miner
 
 Use this endpoint to make a deal with a storage provider and a file you have already uploaded to Estuary. You will need the local ID of that file.
+
+*miner* is the address of the storage provider you want to make a deal with.
+
+### Swagger
+For more information about this API swagger specification, see [here](swagger-ui-page#/deals/post_deals_make__miner_)
+
 
 ### This page is a work in progress
 
@@ -42,8 +48,8 @@ const curl = `curl -X POST https://api.estuary.tech/deals/make/f02620 -d '{ "con
 function APIMakeDealWithProvider(props) {
   return (
     <App
-      title="Estuary Documentation: API: /deals/make/:provider-id"
-      description="https://api.estuary.tech/deals/make/:provider-id"
+      title="Estuary Documentation: API: /deals/make/:miner"
+      description="https://api.estuary.tech/deals/make/:miner"
       url="https://docs.estuary.tech/api-make-deal-with-provider"
       active="api-make-deal-with-provider"
       curl={curl}

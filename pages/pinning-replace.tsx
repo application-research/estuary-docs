@@ -9,6 +9,9 @@ const markdown = `# ➟ /pinning/pins/:id
 ## Overview
 Replace a pinned object.
 
+### Swagger
+For more information about this API swagger specification, see [here](swagger-ui-page#/pinning/post_pinning_pins__requestid_)
+
 ### Need more information?
 
 Check out the [offical IPFS Pinning documentation](https://ipfs.github.io/pinning-services-api-spec/#tag/pins/paths/~1pins~1{requestid}/post). We made sure the follow the standards.

@@ -8,6 +8,9 @@ const markdown = `# ➟ /content/by-cid/:cid
 
 Use this to view a CID information like: which providers have a copy, deal ids, and if it is pinned on Estuary. 
 
+### Swagger
+For more information about this API swagger specification, see [here](swagger-ui-page#/content/get_content_by_cid__cid_)
+
 ### This page is a work in progress
 
 We will be adding more code examples and more details over time. Thanks for bearing with us and our team! If you have ideas, write us some [feedback](https://docs.estuary.tech/feedback).

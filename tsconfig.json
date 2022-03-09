@@ -49,5 +49,5 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ]
+, "pages/swagger-contributingtsx"  ]
 }

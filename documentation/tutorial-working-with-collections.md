@@ -86,9 +86,14 @@ When a piece of content doesn't have a directory path in a collection, it is imp
 curl -X GET -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" https://api.estuary.tech/collections/content/28d923b5-2561-43ee-8ab3-fb42088666f2
 ```
 
+### Deleting a collection
+In case you want to delete a previously created collection, you can do so with the following curl:
 
+```
+curl -X DELETE  https://api.estuary.tech/collections/<uuid> -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY"
+```
 
-
+where the query parameter **uuid** is the uuid of the collection you are trying to delete.
 
 
 

@@ -20,7 +20,7 @@ We will be adding more code examples and more details over time. Thanks for bear
 
 
 const key = `api-content-add-car`;
-const curl = `curl -X POST https://api.estuary.tech/content/add-car -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" -H "Accept: application/json" -T PATH_TO_FILE`;
+const curl = `curl -X POST https://upload.estuary.tech/content/add-car -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" -H "Accept: application/json" -T PATH_TO_FILE`;
 
 const code = `class Example extends React.Component {
  upload(e) {
@@ -31,7 +31,7 @@ const code = `class Example extends React.Component {
     // because we want to show progress. But you can use
     // fetch in this example if you like.
     const xhr = new XMLHttpRequest();
-    var url = "https://api.estuary.tech";
+    var url = "https://upload.estuary.tech";
     xhr.upload.onprogress = (e) => {
       this.setState({ 
         loaded: event.loaded, 
@@ -65,7 +65,7 @@ function APIContentAddCAR(props) {
   return (
     <App
       title="Estuary Documentation: API: /content/add-car"
-      description="https://api.estuary.tech/content/add-car"
+      description="https://upload.estuary.tech/content/add-car"
       url={`https://docs.estuary.tech/${key}`}
       active={key}
       curl={curl}

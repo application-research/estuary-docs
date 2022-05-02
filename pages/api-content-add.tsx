@@ -16,7 +16,7 @@ Adding this query paramter will add the file to any collection.
 
 ### ?collectionPath=/path/to/thing
 
-Adding this query paramter will add the file to a specific path in the collection
+Adding this query parameter will add the file to a specific path in the collection
 
 ### Swagger
 For more information about this API swagger specification, see [here](swagger-ui-page#/content/post_content_add)

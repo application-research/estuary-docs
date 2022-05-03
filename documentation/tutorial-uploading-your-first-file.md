@@ -12,7 +12,7 @@ Once you have an API key, you can use the code shown to upload a file to the Fil
 
 Based on the size of the data you used for this step, the example to the right might take a while, but this is all thats involved with getting data onto the Filecoin Network through Estuary.
 
-You can also use fetch in this example if you want. (Note that streamed uploads via `Transfer-Encoding: Chunked` are currently not supported)
+You can also use fetch in this example if you want.
 
 ```
 fetch('https://api.estuary.tech/content/add', {

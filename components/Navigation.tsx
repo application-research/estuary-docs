@@ -20,6 +20,12 @@ const CollectionsSet = [
     method: 'POST',
   },
   {
+    key: 'api-collections-commit',
+    title: 'Commit Collection',
+    href: '/collections-commit',
+    method: 'POST',
+  },
+  {
     key: 'api-collections-add-content',
     title: 'Add content',
     href: '/collections-add-content',

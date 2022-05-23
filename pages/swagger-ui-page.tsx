@@ -6,7 +6,7 @@ function PageSwaggerTest(props) {
   const SwaggerUI = dynamic(import('swagger-ui-react'), {ssr: false})
   return (
     // @ts-ignore
-    <SwaggerUI url="static/swagger/v1_0_0/swagger.json" docExpansion="list" deepLinking={true} />
+    <SwaggerUI url="https://raw.githubusercontent.com/application-research/estuary/master/docs/swagger.json" docExpansion="list" deepLinking={true} />
   );
 }
 

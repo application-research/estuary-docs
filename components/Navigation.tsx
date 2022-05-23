@@ -92,12 +92,6 @@ const SwaggerSet = [
 
 const APISet = [
   {
-    key: 'api-generate-client-safe-upload-key',
-    title: 'Add client safe upload key',
-    href: '/api-generate-client-upload-key',
-    method: 'POST',
-  },
-  {
     key: 'api-content-add',
     title: 'Add data',
     href: '/api-content-add',
@@ -222,6 +216,27 @@ const PinningStandardSet = [
   },
 ];
 
+const UserSet = [
+  {
+    key: 'user-key-get',
+    title: 'Get user API keys',
+    href: '/user-key-get',
+    method: 'GET',
+  },
+  {
+    key: 'user-key-add',
+    title: 'Add user API key',
+    href: '/user-key-add',
+    method: 'POST',
+  },
+  {
+    key: 'user-key-revoke',
+    title: 'Revoke user API key',
+    href: '/user-key-revoke',
+    method: 'DELETE',
+  },
+];
+
 const ReferenceSet = [
   {
     key: 'database-schema',
@@ -312,6 +327,31 @@ export default function Navigation(props) {
       </div>
 
       {CollectionsSet.map((x) => {
+        return (
+          <a
+            key={x.key}
+            style={props.active === x.key ? { color: `var(--color-primary)` } : null}
+            className={styles.sections__index__item}
+            href={x.href}
+          >
+            {x.method ? (
+              <span
+                className={styles.method}
+                style={props.active === x.key ? { color: `var(--color-primary)` } : null}
+              >
+                {x.method}
+              </span>
+            ) : null}
+            <span className={styles.text}>{x.title}</span>
+          </a>
+        );
+      })}
+
+      <div style={{ marginTop: 48 }} className={styles.sections__index__title}>
+        User key API
+      </div>
+
+      {UserSet.map((x) => {
         return (
           <a
             key={x.key}

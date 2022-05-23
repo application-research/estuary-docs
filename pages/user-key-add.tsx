@@ -6,6 +6,7 @@ import App from '@components/App';
 
 const markdown = `# ➟ /user/api-keys?perms=upload&expiry=24h
 
+## Overview
 Use the endpoint to create an API key on your server that you can expose to any client. This is useful for uploading large files from the browser since you do not have to proxy through your own servers and potentially take ingress or egress costs.
 
 Make sure you use this endpoint with the query parameters. If you don't you will create an API key with a longer expiry and potentially more permissions then you should be granting through this API.
@@ -25,8 +26,8 @@ function APIContentStats(props) {
     <App
       title="Estuary Documentation: API: /user/api-keys?perms=upload&expiry=24h"
       description="https://api.estuary.tech/user/api-keys?perms=upload&expiry=24h"
-      url="https://docs.estuary.tech/api-generate-client-upload-key"
-      active="api-generate-client-upload-key"
+      url="https://docs.estuary.tech/user-key-add"
+      active="user-key-add"
       curl={curl}
       markdown={markdown}
       code={code}

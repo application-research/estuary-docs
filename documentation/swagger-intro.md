@@ -16,7 +16,7 @@ Open the Estuary API Swagger UI [here](swagger-ui-page)
 
 Once you have the API key, you would need to put this key on the Authorized modal popup.
 
- ![API Key placement](static/swagger/api_key_here.png)
+ ![API Key placement](static/api_key_here.png)
 
 ### Step 3: Run and test some of the endpoints
 

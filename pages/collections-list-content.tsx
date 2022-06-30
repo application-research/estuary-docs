@@ -6,7 +6,7 @@ import App from '@components/App';
 
 const COLLECTION_ID = `845c2920-0201-416f-86f9-c7da7b859707`;
 
-const markdown = `# ➟ /collections/content/:collection-id
+const markdown = `# ➟ /collections/content?coluuid=:collection-id
 
 Use this endpoint to get **all** the contents of a specific collection, regardless of they having a defined path inside the collection or not
 
@@ -20,7 +20,7 @@ We will be adding more code examples and more details over time. Thanks for bear
 
 const code = `class Example extends React.Component {
   componentDidMount() {
-    fetch('https://api.estuary.tech/collections/content/${COLLECTION_ID}',{
+    fetch('https://api.estuary.tech/collections/content?coluuid=${COLLECTION_ID}',{
         method: "GET",
         headers: {
           Authorization: 'Bearer REPLACE_ME_WITH_API_KEY',
@@ -44,8 +44,8 @@ const curl = `curl -X GET -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" htt
 function APICollectionsListContent(props) {
   return (
     <App
-      title="Estuary Documentation: API: /collections/content/:collection-id"
-      description="https://api.estuary.tech/collections/content/:collection-id"
+      title="Estuary Documentation: API: /collections/content?coluuid=:collection-id"
+      description="https://api.estuary.tech/collections/content?coluuid=:collection-id"
       url="https://docs.estuary.tech/api-collections-list-content"
       active="api-collections-content-by-id"
       curl={curl}

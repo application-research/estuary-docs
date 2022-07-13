@@ -330,4 +330,4 @@ Once Estuary stores your files on IPFS and Filecoin, corresponding CIDs will be 
 
 Rclone and Estuary are both very useful and powerful tools. Together, they provide many features and large potential for fast, convenient cloud storage file management. Now that you have a sense of how to use rclone to manage files between Estuary and other storage providers, feel free to explore more features such as storage disks mounting, server backup, offline download, and more.
 
-For questions or additional support, join the `#arg` channel in [Filecoin Slack](http://filecoin.io/slack).
+For questions or additional support, join the `#ecosystem-dev` channel in [Filecoin Slack](http://filecoin.io/slack).

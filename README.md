@@ -33,4 +33,4 @@ This repo contains all the documentation for [estuary.tech](https://estuary.tech
 
 ## Get support
 
-Running into problems? [Leave an issue](https://github.com/application-research/estuary-docs/issues), or [join the #arg Slack](https://filecoin.io/slack).
+Running into problems? [Leave an issue](https://github.com/application-research/estuary-docs/issues), or [join the #ecosystem-dev Slack](https://filecoin.io/slack).

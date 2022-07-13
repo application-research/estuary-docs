@@ -439,7 +439,7 @@ export default function Navigation(props) {
         Give feedback
       </a>
       <a target="_blank" className={styles.sections__index__item} href="https://filecoin.io/slack">
-        Join Slack (#arg)
+        Join Slack (#ecosystem-dev)
       </a>
       <a className={styles.sections__index__item} href="/terms">
         Terms of Service

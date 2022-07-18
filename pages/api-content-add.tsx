@@ -10,11 +10,11 @@ Use this endpoint to upload data to the Estuary Node, one file at a time.
 
 For more of an explanation, read [this](https://docs.estuary.tech/tutorial-uploading-your-first-file).
 
-### ?collection=UUID-OF-YOUR-COLLECTION
+### ?coluid=UUID-OF-YOUR-COLLECTION
 
 Adding this query paramter will add the file to any collection.
 
-### ?collectionPath=/path/to/thing
+### ?colpath=/path/to/thing
 
 Adding this query parameter will add the file to a specific path in the collection
 

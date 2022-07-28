@@ -28,7 +28,7 @@ const code = `class Example extends React.Component {
     
     xhr.open(
       "POST", 
-      "https://api.estuary.tech/content/add"
+      "https://shuttle-4.estuary.tech/content/add"
     );
     xhr.setRequestHeader(
       "Authorization", 
@@ -49,7 +49,7 @@ const code = `class Example extends React.Component {
 }`;
 
 const curl = `curl
- -X POST https://api.estuary.tech/content/add \\ 
+ -X POST https://shuttle-4.estuary.tech/content/add \\ 
  -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" \\ 
  -H "Content-Type: multipart/form-data" \\ 
  -F "data=@PATH_TO_YOUR_FILE"`;

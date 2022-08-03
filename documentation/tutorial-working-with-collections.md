@@ -47,15 +47,15 @@ curl -X POST https://api.estuary.tech/content/add -H "Authorization: Bearer REPL
 ```
 **Obs:** estuaryId can also be called **contentID** or **contID**
 
-Now that we have the estuaryId (which is **10** in this example), we can add **file1.txt** to our collection, again using its UUID to identify it:
+Now that we have the estuaryId (which is **10** in this example), we can add **file1.txt** to a collection that we specify with a uuid, as before. 
 ```
-curl -X POST https://api.estuary.tech/collections/add-content -d '{ "contents": [10], "cids": [], "collection": "28d923b5-2561-43ee-8ab3-fb42088666f2" }' -H "Content-Type: application/json" -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY"
+curl -X POST https://api.estuary.tech/collections/add-content -d '{ "contents": [10], "cids": [], "coluuid": "28d923b5-2561-43ee-8ab3-fb42088666f2" }' -H "Content-Type: application/json" -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY"
 ```
 
 #### /content/add-ipfs
 We can also use the **/content/add-ipfs** endpoint to add CIDs to estuary and also put them in a collection at the same API call. Using this endpoint we must specify the content by CID (in the **root** field):
 ```
-curl -X POST https://api.estuary.tech/content/add-ipfs -d '{ "name": "file1.txt", "root": "QmS8dypUY34t3UF7Xd98KhuxqQ8F45WckJCGkdhNnwgvM4", "collection": "28d923b5-2561-43ee-8ab3-fb42088666f2", "collectionPath": "/dir1/file1.txt" }' -H "Content-Type: application/json" -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY"
+curl -X POST https://api.estuary.tech/content/add-ipfs -d '{ "name": "file1.txt", "root": "QmS8dypUY34t3UF7Xd98KhuxqQ8F45WckJCGkdhNnwgvM4", "coluuid": "28d923b5-2561-43ee-8ab3-fb42088666f2", "collectionPath": "/dir1/file1.txt" }' -H "Content-Type: application/json" -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY"
 ```
 
 Notice we also specified a new field **collectionPath**. In the next section we will explore another feature of collections: collection directory paths.
@@ -63,7 +63,7 @@ Notice we also specified a new field **collectionPath**. In the next section we 
 ### Collection directory paths
 Besides having several collections to organize data, users can also further organize content inside collections using directory paths. Directory paths are filesystem-like paths such as **/this/is/a/path/to/a/file**. To create a path, we just need to put a file inside it using the **collectionPath** field. Let's take the example used in the last section:
 ```
-curl -X POST https://api.estuary.tech/content/add-ipfs -d '{ "name": "file1.txt", "root": "QmS8dypUY34t3UF7Xd98KhuxqQ8F45WckJCGkdhNnwgvM4", "collection": "28d923b5-2561-43ee-8ab3-fb42088666f2", "collectionPath": "/dir1/file1.txt" }' -H "Content-Type: application/json" -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY"
+curl -X POST https://api.estuary.tech/content/add-ipfs -d '{ "name": "file1.txt", "root": "QmS8dypUY34t3UF7Xd98KhuxqQ8F45WckJCGkdhNnwgvM4", "coluuid": "28d923b5-2561-43ee-8ab3-fb42088666f2", "collectionPath": "/dir1/file1.txt" }' -H "Content-Type: application/json" -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY"
 ```
 Since the **collectionPath** for **file1.txt** is **/dir1/file1.txt**, the path **/dir1/** inside that collection gets created, and we can list only the contents of that path:
 ```
@@ -83,7 +83,7 @@ curl -X GET -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" "https://api.estu
 When a piece of content doesn't have a directory path in a collection, it is impossible to list it using the **/collections/fs/list** endpoint since that requires a **dir** to be specified and, even if it isn't, it defaults to the **/** path. In order to list all the contents of a collection, even the ones that don't have a directory path set, we can use **/collections/content/:collection-uuid**:
 
 ```
-curl -X GET -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" https://api.estuary.tech/collections/content/28d923b5-2561-43ee-8ab3-fb42088666f2
+curl -X GET -H "Authorization: Bearer REPLACE_ME_WITH_API_KEY" https://api.estuary.tech/collections/content?coluuid=28d923b5-2561-43ee-8ab3-fb42088666f2
 ```
 
 ### Deleting a collection
